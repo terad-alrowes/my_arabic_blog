@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://my_arabic_blog.com/sitemap.xml
-
