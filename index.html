@@ -1,79 +1,319 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مدونة إعلامية ثقافية عربية تهدف إلى نشر الوعي الثقافي والفكري والفني، بإشراف د. طراد الرويس.">
-  <meta name="keywords" content="ثقافة, أدب, فنون, إعلام, مقالات, د. طراد الرويس">
-  <meta property="og:title" content="مدونة الثقافة العربية">
-  <meta property="og:description" content="منصة عربية إعلامية ثقافية تقدم مقالات وتحليلات في مجالات الأدب والفكر والفنون.">
-  <meta property="og:image" content="images/preview-image.jpg">
-  <meta property="og:type" content="website">
-  <title>مدونة الثقافة العربية</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية." />
+<title>مدونة إعلامية ثقافية</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+  }
+  body {
+    animation: fadeIn 1.5s ease-in-out;
+    background: linear-gradient(135deg, #f8f9fa, #e8f5e9);
+    scroll-behavior: smooth;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  header {
+    background: linear-gradient(90deg, #004d40, #00796b);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transform: scale(1.1);
+  }
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(0, 77, 64, 0.8), rgba(0, 121, 107, 0.8)),
+      url('background.jpg') no-repeat center/cover;
+    color: white;
+    padding: 100px 20px;
+  }
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-in-out;
+  }
+  .reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-in-out;
+  }
+  .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .delay-1 {
+    transition-delay: 0.2s;
+  }
+  .delay-2 {
+    transition-delay: 0.4s;
+  }
+  .delay-3 {
+    transition-delay: 0.6s;
+  }
+  #articles {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  #articles h2 {
+    color: #004d40;
+    margin-bottom: 20px;
+  }
+  .article {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .article:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  #about {
+    background: linear-gradient(135deg, #e0f2f1, #ffffff);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  #contact {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  form {
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  form:hover {
+    transform: scale(1.02);
+  }
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  form input:focus,
+  form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+  }
+  form button {
+    background: linear-gradient(90deg, #004d40, #00796b);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+  }
+  form button:hover {
+    background: linear-gradient(90deg, #00796b, #004d40);
+    transform: scale(1.05);
+  }
+  footer {
+    background: linear-gradient(90deg, #004d40, #00796b);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* زر العودة للأعلى */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(90deg, #004d40, #00796b);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: scale(0);
+    animation: popUp 0.4s ease forwards;
+  }
+  #backToTop.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+  }
+  #backToTop svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: transform 0.6s ease;
+  }
+  #backToTop:hover svg {
+    transform: translateY(-4px) rotate(360deg);
+  }
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-      <div class="logo">
-          <h1>مدونة الثقافة العربية</h1>
-      </div>
-      <nav>
-          <ul>
-              <li><a href="#home">الصفحة الرئيسية</a></li>
-              <li><a href="#articles">مقالات</a></li>
-              <li><a href="#about">من نحن</a></li>
-              <li><a href="#contact">اتصل بنا</a></li>
-          </ul>
-      </nav>
-  </header>
+<header>
+  <div class="logo"><h1>مدونة الثقافة العربية</h1></div>
+  <nav>
+    <ul>
+      <li><a href="#home">الصفحة الرئيسية</a></li>
+      <li><a href="#articles">مقالات</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section id="home">
-      <div class="hero">
-          <h2>أهلاً بكم في مدونتنا الثقافية</h2>
-          <p>منصة إعلامية عربية لنشر الفكر والأدب والفنون بإشراف د. طراد الرويس.</p>
-      </div>
-  </section>
+<section id="home" class="hero reveal">
+  <h2>أهلاً بكم في مدونتنا الثقافية</h2>
+  <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
+</section>
 
-  <section id="articles">
-      <h2>أحدث المقالات</h2>
-      <div class="article">
-          <h3>الثقافة العربية والنهضة الفكرية الحديثة</h3>
-          <p>رحلة عبر التاريخ لفهم دور الثقافة العربية في تشكيل الهوية الفكرية الحديثة وإسهامها في النهضة العالمية.</p>
-          <a href="#">اقرأ المزيد...</a>
-      </div>
-      <div class="article">
-          <h3>الأدب العربي: من الشعر الجاهلي إلى الرواية المعاصرة</h3>
-          <p>استعراض لأهم محطات الأدب العربي وتحولاته من الشفاهية إلى النصوص المعاصرة.</p>
-          <a href="#">اقرأ المزيد...</a>
-      </div>
-      <div class="article">
-          <h3>الفنون العربية بين الأصالة والمعاصرة</h3>
-          <p>كيف استطاعت الفنون العربية أن تجمع بين تراثها العريق وروح الحداثة في مختلف المجالات.</p>
-          <a href="#">اقرأ المزيد...</a>
-      </div>
-  </section>
+<section id="articles" class="reveal-left delay-1">
+  <h2>أحدث المقالات</h2>
+  <div class="article reveal delay-1">
+    <h3>عنوان المقال الأول</h3>
+    <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
+    <a href="#">اقرأ المزيد...</a>
+  </div>
+  <div class="article reveal delay-2">
+    <h3>عنوان المقال الثاني</h3>
+    <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
+    <a href="#">اقرأ المزيد...</a>
+  </div>
+  <div class="article reveal delay-3">
+    <h3>عنوان المقال الثالث</h3>
+    <p>محتوى المقال الثالث عن الفنون والموسيقى العربية.</p>
+    <a href="#">اقرأ المزيد...</a>
+  </div>
+</section>
 
-  <section id="about">
-      <h2>من نحن</h2>
-      <p>مدونة الثقافة العربية منصة إعلامية مستقلة، تهدف إلى تعزيز الوعي الثقافي ونشر الفكر العربي الأصيل من خلال مقالات وتحليلات في مجالات الأدب، الإعلام، والفنون.  
-      بإشراف الكاتب والإعلامي <strong>د. طراد الرويس</strong>.</p>
-  </section>
+<section id="about" class="reveal-right delay-2">
+  <h2>من نحن</h2>
+  <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
+</section>
 
-  <section id="contact">
-      <h2>اتصل بنا</h2>
-      <form action="https://formspree.io/f/your-id" method="POST">
-          <label for="name">الاسم:</label>
-          <input type="text" id="name" name="name" required>
-          <label for="email">البريد الإلكتروني:</label>
-          <input type="email" id="email" name="email" required>
-          <label for="message">الرسالة:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">إرسال</button>
-      </form>
-  </section>
+<section id="contact" class="reveal-left delay-3">
+  <h2>اتصل بنا</h2>
+  <form class="reveal delay-4">
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required />
+    <label for="message">الرسالة:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
 
-  <footer>
-      <p>&copy; 2025 مدونة الثقافة العربية - جميع الحقوق محفوظة - د. طراد الرويس</p>
-  </footer>
+<footer class="reveal">
+  <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
+</footer>
+
+<!-- زر العودة للأعلى مع أيقونة SVG -->
+<button id="backToTop" aria-label="العودة للأعلى" title="العودة للأعلى">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z" />
+  </svg>
+</button>
+
+<script>
+  // تأثيرات الظهور عند التمرير
+  function revealOnScroll() {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) el.classList.add('active');
+    });
+  }
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+
+  // زر العودة للأعلى
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
