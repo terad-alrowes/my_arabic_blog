@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://terad-alrowes.github.io/my-arabic-blog/sitemap.xml
+Sitemap: https://terad-alrowes.github.io/my_arabic_blog/sitemap.xml
+
