@@ -1,0 +1,175 @@
+/* إعدادات عامة */
+body {
+  font-family: "Amiri", "Tahoma", serif;
+  background-color: #faf5ef;
+  color: #3e2723;
+  line-height: 1.9;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(135deg, #4e342e, #6d4c41, #8d6e63);
+  color: #f9f6f2;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-bottom: 6px solid #d4af37;
+  position: relative;
+  overflow: hidden;
+}
+
+/* زخرفة ذهبية واضحة */
+header::before, header::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Islamic_star_pattern.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+}
+
+header::before { top: -30px; right: -30px; }
+header::after { bottom: -30px; left: -30px; }
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px #d4af37;
+}
+
+header p {
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+  color: #fceabb;
+  text-shadow: 0 0 6px #8d6e63;
+}
+
+/* شريط التنقل */
+nav {
+  background: #3e2723;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 4px solid #d4af37;
+}
+
+nav a {
+  color: #fceabb;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+/* المقالات */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+article {
+  background: #fffdf8;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 14px rgba(62, 39, 35, 0.2);
+  position: relative;
+}
+
+article h2 {
+  color: #4e342e;
+  margin-top: 0;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+article p {
+  font-size: 1.1rem;
+  color: #3e2723;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(62, 39, 35, 0.2);
+}
+
+/* القائمة الجانبية */
+aside {
+  background: #fff8f2;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+}
+
+/* الفوتر */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #3e2723;
+  color: #fceabb;
+  border-top: 4px solid #d4af37;
+}
+
+footer a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-shadow: 0 0 8px #d4af37;
+}
+
+/* أزرار */
+button, .btn {
+  background: #d4af37;
+  color: #3e2723;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: #fceabb;
+  box-shadow: 0 0 10px #d4af37;
+}
+
+/* استجابة الهواتف */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  main, aside {
+    padding: 0 0.5rem;
+  }
+}
