@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-/* ===== Header ===== */
 header {
   background-color: #004d40;
   color: #fff;
@@ -37,7 +36,6 @@ nav ul li a:hover {
   background-color: #00796b;
 }
 
-/* ===== Hero Section ===== */
 .hero {
   background: url('background.jpg') no-repeat center center/cover;
   color: white;
@@ -45,15 +43,8 @@ nav ul li a:hover {
   padding: 100px 20px;
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-/* ===== Articles ===== */
 #articles {
   padding: 40px;
-  background: #f9f9f9;
 }
 
 .article {
@@ -61,41 +52,30 @@ nav ul li a:hover {
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
-.article h3 {
-  color: #004d40;
-}
-
-/* ===== About ===== */
 #about {
   background-color: #eee;
   padding: 40px;
   text-align: center;
 }
 
-/* ===== Contact ===== */
 #contact {
   padding: 40px;
-  background: #f9f9f9;
 }
 
 form {
   max-width: 400px;
   margin: auto;
-  background: #fff;
+  background: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
 
 form input, form textarea {
   width: 100%;
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
 form button {
@@ -111,7 +91,6 @@ form button:hover {
   background-color: #00796b;
 }
 
-/* ===== Footer ===== */
 footer {
   background-color: #004d40;
   color: white;
@@ -120,7 +99,6 @@ footer {
   margin-top: 20px;
 }
 
-/* ===== Back To Top Button ===== */
 #backToTop {
   display: none;
   position: fixed;
