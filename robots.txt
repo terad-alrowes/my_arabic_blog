@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://terad-alrowes.github.io/my-arabic-blog/sitemap.xml
