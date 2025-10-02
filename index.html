@@ -3,47 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مدونتي العربية</title>
+  <title>المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <h1>مدونتي العربية</h1>
-    <p>مقالات ثقافية وإبداعية عربية</p>
+    <h1>المدونة العربية للثقافة والإعلام</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#articles">المقالات</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#articles">المقالات</a>
-    <a href="#about">عن المدونة</a>
-    <a href="#contact">اتصل بنا</a>
-  </nav>
+  <section class="hero" id="home">
+    <h2>مرحباً بكم في فضاء الثقافة والإعلام</h2>
+    <p>نافذة عربية تجمع الفكر والإبداع</p>
+  </section>
 
-  <main>
-    <article>
-      <h2>عنوان المقال الأول</h2>
-      <p>هذا نص تجريبي لمقال يظهر داخل المدونة العربية. يمكنك تعديل المحتوى وإضافة المقالات والصور كما تشاء.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Islamic_star_pattern.svg" alt="زخرفة إسلامية">
-      <p>المدونة جاهزة لتقديم محتوى ثقافي مميز وجذاب للقراء.</p>
-    </article>
+  <section id="articles">
+    <h2>أحدث المقالات</h2>
+    <div class="article">
+      <h3>عنوان المقال الأول</h3>
+      <p>هذا مثال لمقال تجريبي يمكن استبداله لاحقاً بالمحتوى الفعلي.</p>
+    </div>
+    <div class="article">
+      <h3>عنوان المقال الثاني</h3>
+      <p>هنا يمكن إضافة نبذة قصيرة عن المقال الثاني.</p>
+    </div>
+  </section>
 
-    <article>
-      <h2>عنوان المقال الثاني</h2>
-      <p>يمكنك استخدام هذا القسم لإضافة المزيد من المقالات. التصميم يدعم النص العربي والخطوط التقليدية مثل Amiri.</p>
-    </article>
-  </main>
+  <section id="about">
+    <h2>من نحن</h2>
+    <p>مدونة عربية تهدف إلى نشر المعرفة والثقافة والإعلام الهادف.</p>
+  </section>
 
-  <aside id="about">
-    <h2>عن المدونة</h2>
-    <p>هذه المدونة تم تصميمها لتكون منصة ثقافية عربية مميزة، بألوان ذهبية وزخارف عربية تقليدية، مع دعم كامل للغة العربية والقراءة من اليمين لليسار.</p>
-  </aside>
+  <section id="contact">
+    <h2>اتصل بنا</h2>
+    <form>
+      <label>الاسم:</label>
+      <input type="text" name="name" required>
+      <label>البريد الإلكتروني:</label>
+      <input type="email" name="email" required>
+      <label>الرسالة:</label>
+      <textarea name="message" rows="5" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
 
-  <footer id="contact">
+  <footer>
     <p>© 2025 جميع الحقوق محفوظة - د. طراد الرويس</p>
-    <p><a href="mailto:info@arabicblog.com">info@arabicblog.com</a></p>
   </footer>
 
+  <button id="backToTop" title="العودة للأعلى">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
