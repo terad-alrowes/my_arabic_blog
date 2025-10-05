@@ -1,0 +1,204 @@
+/* استيراد خط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* الهيدر */
+header {
+  background-color: #004d40;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 22px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #00796b;
+  border-radius: 5px;
+}
+
+/* زر القائمة للموبايل */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #004d40;
+    width: 100%;
+    text-align: center;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+/* الهيرو */
+.hero {
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  color: white;
+  padding: 120px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #00796b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #004d40;
+}
+
+/* المقالات */
+#articles {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.article {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+}
+
+.article h3 {
+  color: #004d40;
+}
+
+.article a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #00796b;
+  font-weight: bold;
+}
+
+.article a:hover {
+  color: #004d40;
+}
+
+/* من نحن */
+#about {
+  background-color: #eee;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* الاتصال */
+#contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: right;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background: #004d40;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #00796b;
+}
+
+/* الفوتر */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* أنيميشن */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
