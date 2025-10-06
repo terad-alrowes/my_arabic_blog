@@ -1,100 +1,82 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
-  <title>مدونة الثقافة العربية</title>
-
-  <!-- تحسينات SEO -->
-  <meta property="og:title" content="مدونة الثقافة العربية">
-  <meta property="og:description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://terad-alrowes.github.io/my-arabic-blog/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80">
-
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
+    <title>مدونة الثقافة العربية</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- ====== رأس الصفحة ====== -->
+    <header>
+        <div class="logo">
+            <h1>مدونة الثقافة العربية</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الصفحة الرئيسية</a></li>
+                <li><a href="#articles">مقالات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- الهيدر -->
-  <header>
-    <div class="logo">
-      <h1>مدونة الثقافة العربية</h1>
-    </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#articles">مقالات</a></li>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-      <!-- زر الموبايل -->
-      <div class="menu-toggle">&#9776;</div>
-    </nav>
-  </header>
+    <!-- ====== القسم الرئيسي ====== -->
+    <section id="home">
+        <div class="hero">
+            <h2>أهلاً بكم في مدونتنا الثقافية</h2>
+            <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
+        </div>
+    </section>
 
-  <!-- قسم الهيرو -->
-  <section id="home">
-    <div class="hero">
-      <h2>أهلاً بكم في مدونتنا الثقافية</h2>
-      <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
-      <a href="#articles" class="btn">ابدأ التصفح</a>
-    </div>
-  </section>
+    <!-- ====== المقالات ====== -->
+    <section id="articles">
+        <h2>أحدث المقالات</h2>
+        <div class="article">
+            <h3>عنوان المقال الأول</h3>
+            <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
+            <a href="#">اقرأ المزيد...</a>
+        </div>
+        <div class="article">
+            <h3>عنوان المقال الثاني</h3>
+            <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
+            <a href="#">اقرأ المزيد...</a>
+        </div>
+    </section>
 
-  <!-- قسم المقالات -->
-  <section id="articles">
-    <h2>أحدث المقالات</h2>
-    <div class="article">
-      <h3>عنوان المقال الأول</h3>
-      <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
-      <a href="#">اقرأ المزيد...</a>
-    </div>
-    <div class="article">
-      <h3>عنوان المقال الثاني</h3>
-      <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
-      <a href="#">اقرأ المزيد...</a>
-    </div>
-  </section>
+    <!-- ====== من نحن ====== -->
+    <section id="about">
+        <h2>من نحن</h2>
+        <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
+    </section>
 
-  <!-- قسم من نحن -->
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
-  </section>
+    <!-- ====== نموذج الاتصال ====== -->
+    <section id="contact">
+        <h2>اتصل بنا</h2>
+        <form action="https://formspree.io/f/xrbykznz" method="POST">
+            <!-- ⚠️ استبدل الرابط أعلاه برابط النموذج الخاص بك من موقع Formspree -->
+            
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
 
-  <!-- قسم الاتصال -->
-  <section id="contact">
-    <h2>اتصل بنا</h2>
-<form action="https://formspree.io/f/xrbykznz" method="POST">
-    <label for="name">الاسم:</label>
-    <input type="text" id="name" name="name" required>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-    <label for="email">البريد الإلكتروني:</label>
-    <input type="email" id="email" name="email" required>
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
 
-    <label for="message">الرسالة:</label>
-    <textarea id="message" name="message" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
 
-    <button type="submit">إرسال</button>
-</form>
-    </form>
-  </section>
-
-  <!-- الفوتر -->
-  <footer>
-    <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
-  </footer>
-
-  <!-- سكربت القائمة المتجاوبة -->
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+    <!-- ====== الفوتر ====== -->
+    <footer>
+        <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
+    </footer>
 </body>
 </html>
+
 
