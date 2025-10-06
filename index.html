@@ -244,11 +244,13 @@ footer {
 
 <section id="articles" class="reveal">
     <h2>أحدث المقالات</h2>
-    <div class="article">
-        <h3>عنوان المقال الأول</h3>
-        <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
-        <a href="#">اقرأ المزيد...</a>
-    </div>
+<article itemscope itemtype="https://schema.org/Article">
+  <h3 itemprop="headline">عنوان المقال الأول</h3>
+  <p itemprop="description">محتوى المقال الأول حول الأدب العربي وفنونه.</p>
+  <meta itemprop="author" content="د. طراد الرويس">
+  <meta itemprop="datePublished" content="2025-10-06">
+  <meta itemprop="publisher" content="المدونة العربية للثقافة والإعلام">
+</article>
     <div class="article">
         <h3>عنوان المقال الثاني</h3>
         <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
@@ -301,4 +303,5 @@ window.addEventListener('load', revealElements);
 
 </body>
 </html>
+
 
