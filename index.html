@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>المدونة العربية للثقافة والإعلام - د. طراد الرويس</title>
 
+  <!-- Meta Description & Keywords -->
   <meta name="description" content="المدونة العربية للثقافة والإعلام بإشراف د. طراد الرويس - منصة ثقافية عربية تهتم بالمقالات الأدبية والإعلامية والفكرية.">
   <meta name="keywords" content="طراد الرويس, مدونة الثقافة العربية, الإعلام العربي, مقالات أدبية, فكر وثقافة, مدونة عربية, إعلام وثقافة">
   <meta name="author" content="د. طراد الرويس">
+  <meta http-equiv="Content-Language" content="ar">
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph (لتحسين المشاركة على فيسبوك وواتساب) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="المدونة العربية للثقافة والإعلام">
   <meta property="og:description" content="منصة عربية ثقافية بإشراف د. طراد الرويس، تقدم محتوى مميز في الأدب والإعلام.">
   <meta property="og:type" content="website">
@@ -23,285 +26,82 @@
   <meta name="twitter:description" content="مدونة عربية بإشراف د. طراد الرويس، تهتم بالشأن الثقافي والإعلامي.">
   <meta name="twitter:image" content="https://terad-alrowes.github.io/my_arabic_blog/images/hero.jpg">
 
-  <!-- أيقونة الموقع -->
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- لغة واتجاه الصفحة -->
-  <meta http-equiv="Content-Language" content="ar">
-  <meta name="robots" content="index, follow">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-/* ===== الخط الأساسي ===== */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-}
-
-/* ===== الهيدر ===== */
-header {
-    background-color: #004d40;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.logo h1 {
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #00796b;
-    border-radius: 5px;
-}
-
-/* ===== الهيرو ===== */
-.hero {
-    text-align: center;
-    background: url('background.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 20px;
-}
-
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-/* ===== المقالات ===== */
-#articles {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.article {
-    background: #f1f1f1;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.article:hover {
-    transform: translateY(-5px);
-}
-
-.article h3 {
-    color: #004d40;
-}
-
-.article a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #00796b;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.article a:hover {
-    color: #004d40;
-}
-
-/* ===== من نحن ===== */
-#about {
-    background-color: #eee;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* ===== نموذج الاتصال ===== */
-.contact-form {
-    width: 80%;
-    max-width: 500px;
-    margin: auto;
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.contact-form:hover {
-    transform: translateY(-5px);
-}
-
-.contact-form label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: bold;
-    color: #004d40;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    font-size: 16px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #00796b;
-    box-shadow: 0 0 8px rgba(0,121,107,0.4);
-    outline: none;
-}
-
-.contact-form button {
-    background-color: #004d40;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.contact-form button:hover {
-    background-color: #00796b;
-    transform: scale(1.05);
-}
-
-.contact-form .success-message {
-    display: none;
-    color: green;
-    font-weight: bold;
-    margin-top: 15px;
-    text-align: center;
-}
-
-/* ===== الفوتر ===== */
-footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* ===== Scroll Reveal ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-</style>
-</head>
 <body>
-
-<header class="reveal">
+  <header>
     <div class="logo">
-        <h1>مدونة الثقافة العربية</h1>
+      <h1>المدونة العربية للثقافة والإعلام</h1>
     </div>
     <nav>
-        <ul>
-            <li><a href="#home">الصفحة الرئيسية</a></li>
-            <li><a href="#articles">مقالات</a></li>
-            <li><a href="#about">من نحن</a></li>
-            <li><a href="#contact">اتصل بنا</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#articles">المقالات</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#contact">اتصل بنا</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<section id="home" class="hero reveal">
-    <h2>أهلاً بكم في مدونتنا الثقافية</h2>
-    <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
-</section>
+  <section id="home" class="hero">
+    <h2>مرحباً بكم في المدونة العربية للثقافة والإعلام</h2>
+    <p>منصة ثقافية بإشراف د. طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.</p>
+  </section>
 
-<section id="articles" class="reveal">
+  <section id="articles">
     <h2>أحدث المقالات</h2>
-<article itemscope itemtype="https://schema.org/Article">
-  <h3 itemprop="headline">عنوان المقال الأول</h3>
-  <p itemprop="description">محتوى المقال الأول حول الأدب العربي وفنونه.</p>
-  <meta itemprop="author" content="د. طراد الرويس">
-  <meta itemprop="datePublished" content="2025-10-06">
-  <meta itemprop="publisher" content="المدونة العربية للثقافة والإعلام">
-</article>
-    <div class="article">
-        <h3>عنوان المقال الثاني</h3>
-        <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
-        <a href="#">اقرأ المزيد...</a>
-    </div>
-</section>
 
-<section id="about" class="reveal">
+    <!-- المقال الأول -->
+    <article itemscope itemtype="https://schema.org/Article" class="article">
+      <h3 itemprop="headline">الأدب العربي بين الأصالة والمعاصرة</h3>
+      <p itemprop="description">يستعرض هذا المقال مسيرة الأدب العربي منذ بداياته الكلاسيكية حتى تطوراته المعاصرة في مختلف الأقطار.</p>
+      <meta itemprop="author" content="د. طراد الرويس">
+      <meta itemprop="datePublished" content="2025-10-06">
+      <meta itemprop="publisher" content="المدونة العربية للثقافة والإعلام">
+      <a href="#">اقرأ المزيد...</a>
+    </article>
+
+    <!-- المقال الثاني -->
+    <article itemscope itemtype="https://schema.org/Article" class="article">
+      <h3 itemprop="headline">الإعلام العربي ودوره في بناء الوعي الثقافي</h3>
+      <p itemprop="description">يتناول هذا المقال دور الإعلام في تشكيل الفكر العربي وتعزيز الهوية الثقافية في مواجهة التحديات الحديثة.</p>
+      <meta itemprop="author" content="د. طراد الرويس">
+      <meta itemprop="datePublished" content="2025-10-06">
+      <meta itemprop="publisher" content="المدونة العربية للثقافة والإعلام">
+      <a href="#">اقرأ المزيد...</a>
+    </article>
+  </section>
+
+  <section id="about">
     <h2>من نحن</h2>
-    <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
-</section>
+    <p>
+      نحن مدونة عربية ثقافية وإعلامية، نسعى إلى إثراء المحتوى العربي من خلال مقالات فكرية وأدبية بإشراف الإعلامي والكاتب د. طراد الرويس.
+    </p>
+  </section>
 
-<section id="contact" class="reveal">
+  <section id="contact">
     <h2>اتصل بنا</h2>
-    <form action="https://formspree.io/f/xrbykznz" method="POST" class="contact-form">
-        <!-- استبدل الرابط أعلاه برابط Formspree الخاص بك -->
-        <label for="name">الاسم:</label>
-        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
-        <label for="email">البريد الإلكتروني:</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required>
-        <label for="message">الرسالة:</label>
-        <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال</button>
-        <p class="success-message">تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.</p>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <label for="name">الاسم:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">الرسالة:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">إرسال</button>
     </form>
-</section>
+  </section>
 
-<footer class="reveal">
-    <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
-</footer>
-
-<script>
-// Scroll Reveal لجميع الأقسام
-function revealElements() {
-    const reveals = document.querySelectorAll('.reveal');
-    for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add('active');
-        }
-    }
-}
-
-window.addEventListener('scroll', revealElements);
-window.addEventListener('load', revealElements);
-</script>
-
+  <footer>
+    <p>&copy; 2025 المدونة العربية للثقافة والإعلام - جميع الحقوق محفوظة.</p>
+  </footer>
 </body>
 </html>
-
-
