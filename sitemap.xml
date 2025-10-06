@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://terad-alrowes.github.io/my_arabic_blog/</loc>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://terad-alrowes.github.io/my_arabic_blog/#articles</loc>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://terad-alrowes.github.io/my_arabic_blog/#about</loc>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://terad-alrowes.github.io/my_arabic_blog/#contact</loc>
     <priority>0.6</priority>
   </url>
+
 </urlset>
+
+
 
 
