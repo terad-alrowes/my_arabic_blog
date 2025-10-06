@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://terad-alrowes.github.io/my-arabic-blog/</loc>
+    <loc>https://terad-alrowes.github.io/my_arabic_blog/</loc>
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://terad-alrowes.github.io/my-arabic-blog/#articles</loc>
+    <loc>https://terad-alrowes.github.io/my_arabic_blog/#articles</loc>
     <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://terad-alrowes.github.io/my-arabic-blog/#about</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://terad-alrowes.github.io/my-arabic-blog/#contact</loc>
-    <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://terad-alrowes.github.io/my_arabic_blog/#contact</loc>
+    <priority>0.5</priority>
   </url>
 </urlset>
+
+</urlset>
+
