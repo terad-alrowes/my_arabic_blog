@@ -1,82 +1,279 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
-    <title>مدونة الثقافة العربية</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
+<title>مدونة الثقافة العربية</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== الخط الأساسي ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* ===== الهيدر ===== */
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00796b;
+    border-radius: 5px;
+}
+
+/* ===== الهيرو ===== */
+.hero {
+    text-align: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* ===== المقالات ===== */
+#articles {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.article {
+    background: #f1f1f1;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+}
+
+.article h3 {
+    color: #004d40;
+}
+
+.article a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.article a:hover {
+    color: #004d40;
+}
+
+/* ===== من نحن ===== */
+#about {
+    background-color: #eee;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ===== نموذج الاتصال ===== */
+.contact-form {
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+}
+
+.contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+    color: #004d40;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0,121,107,0.4);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #004d40;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+.contact-form .success-message {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ===== الفوتر ===== */
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
 </head>
-
 <body>
-    <!-- ====== رأس الصفحة ====== -->
-    <header>
-        <div class="logo">
-            <h1>مدونة الثقافة العربية</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">الصفحة الرئيسية</a></li>
-                <li><a href="#articles">مقالات</a></li>
-                <li><a href="#about">من نحن</a></li>
-                <li><a href="#contact">اتصل بنا</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- ====== القسم الرئيسي ====== -->
-    <section id="home">
-        <div class="hero">
-            <h2>أهلاً بكم في مدونتنا الثقافية</h2>
-            <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
-        </div>
-    </section>
+<header class="reveal">
+    <div class="logo">
+        <h1>مدونة الثقافة العربية</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">الصفحة الرئيسية</a></li>
+            <li><a href="#articles">مقالات</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- ====== المقالات ====== -->
-    <section id="articles">
-        <h2>أحدث المقالات</h2>
-        <div class="article">
-            <h3>عنوان المقال الأول</h3>
-            <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
-            <a href="#">اقرأ المزيد...</a>
-        </div>
-        <div class="article">
-            <h3>عنوان المقال الثاني</h3>
-            <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
-            <a href="#">اقرأ المزيد...</a>
-        </div>
-    </section>
+<section id="home" class="hero reveal">
+    <h2>أهلاً بكم في مدونتنا الثقافية</h2>
+    <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
+</section>
 
-    <!-- ====== من نحن ====== -->
-    <section id="about">
-        <h2>من نحن</h2>
-        <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
-    </section>
+<section id="articles" class="reveal">
+    <h2>أحدث المقالات</h2>
+    <div class="article">
+        <h3>عنوان المقال الأول</h3>
+        <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
+        <a href="#">اقرأ المزيد...</a>
+    </div>
+    <div class="article">
+        <h3>عنوان المقال الثاني</h3>
+        <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
+        <a href="#">اقرأ المزيد...</a>
+    </div>
+</section>
 
-    <!-- ====== نموذج الاتصال ====== -->
-    <section id="contact">
-        <h2>اتصل بنا</h2>
-        <form action="https://formspree.io/f/xrbykznz" method="POST">
-            <!-- ⚠️ استبدل الرابط أعلاه برابط النموذج الخاص بك من موقع Formspree -->
-            
-            <label for="name">الاسم:</label>
-            <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+<section id="about" class="reveal">
+    <h2>من نحن</h2>
+    <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
+</section>
 
-            <label for="email">البريد الإلكتروني:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+<section id="contact" class="reveal">
+    <h2>اتصل بنا</h2>
+    <form action="https://formspree.io/f/xrbykznz" method="POST" class="contact-form">
+        <!-- استبدل الرابط أعلاه برابط Formspree الخاص بك -->
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <label for="message">الرسالة:</label>
+        <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit">إرسال</button>
+        <p class="success-message">تم إرسال رسالتك بنجاح! شكرًا لتواصلك معنا.</p>
+    </form>
+</section>
 
-            <label for="message">الرسالة:</label>
-            <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+<footer class="reveal">
+    <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
+</footer>
 
-            <button type="submit">إرسال</button>
-        </form>
-    </section>
+<script>
+// Scroll Reveal لجميع الأقسام
+function revealElements() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
 
-    <!-- ====== الفوتر ====== -->
-    <footer>
-        <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
-    </footer>
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', revealElements);
+window.addEventListener('load', revealElements);
+</script>
+
 </body>
 </html>
-
-
