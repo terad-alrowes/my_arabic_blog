@@ -312,4 +312,86 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ✅ تنسيق عام للمقالات */
+.blog-post {
+  background-color: #f9f9fb;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 25px 35px;
+  margin: 30px auto;
+  max-width: 800px;
+  line-height: 1.9;
+  text-align: justify;
+  font-family: "Cairo", "Amiri", sans-serif;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 🔹 عنوان القسم */
+#articles h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #1a237e;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #1a237e;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* 🔹 عنوان المقال */
+.blog-post .post-title {
+  color: #283593;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* 🔹 بيانات الكاتب والتاريخ */
+.blog-post .post-meta {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* 🔹 فقرات المقال */
+.blog-post p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* 🔹 العناوين داخل النص */
+.blog-post strong {
+  color: #0d47a1;
+}
+
+/* 🔹 الكلمات المفتاحية */
+.blog-post .tags {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.blog-post .tags span {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin: 0 4px;
+  display: inline-block;
+}
+
+/* 🔹 النهاية */
+.blog-post .article-end {
+  text-align: left;
+  font-weight: bold;
+  color: #263238;
+}
+
+
+
 
