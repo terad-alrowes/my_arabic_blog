@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"يوتيوب" وتأثيره على الأطفال | المدونة العربية للثقافة والإعلام</title>
+  <meta name="description" content="مقال بقلم د. طراد الرويس حول مخاطر المحتوى الموجه للأطفال عبر منصة يوتيوب وتأثيره النفسي والاجتماعي.">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body {
+      background-color: #fafafa;
+      font-family: 'Cairo', sans-serif;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #004d40;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-article {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      background: url('../images/youtube-children-article.jpg') no-repeat center center/cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
+      font-size: 1.1em;
+    }
+
+    .article-container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .article-container h2 {
+      color: #004d40;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .article-container p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .author {
+      text-align: left;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>المدونة العربية للثقافة والإعلام</h1>
+  </header>
+
+  <section class="hero-article">
+    <div class="hero-overlay">
+      <h1>"يوتيوب" وتأثيره على الأطفال</h1>
+      <p>بقلم: د. طراد علي بن سرحان الرويس</p>
+    </div>
+  </section>
+
+  <main class="article-container">
+    <h2>"يوتيوب" نافذة مفتوحة أمام عيون أطفالنا تسبب الرعب في قلوبهم وتدمر عقولهم</h2>
+    <p class="author">بقلم: د. طراد علي بن سرحان الرويس</p>
+
+    <p>أن منصة "يوتيوب" أصبحت نافذة مفتوحة أمام عيون الأطفال تسبب الرعب في قلوبهم وتدمر عقولهم، وذلك من خلال مشاهد مرعبة تتسلل إلى عقول الأطفال عبر "يوتيوب"، واضطرابات نفسية تهدد براءتهم...</p>
+
+    <p>حيث أصبح "يوتيوب" متاحًا بين أيديهم عبر الهواتف والتلفاز والألواح الذكية، لكنها لم تعد مجرد منصة ترفيهية، بل ساحة تتسلل إليها مشاهد مرعبة...</p>
+
+    <p>وكما يعلم الجميع، فإن التكنولوجيا أصبحت عنصرًا مهمًا في حياة الإنسان لا يُمكن الاستغناء عنه، ومع تطورها السريع...</p>
+
+    <p>وما أردت الإشارة إليه، هو أن هذه المقاطع تنتشر عبر خوارزميات موجهة تستهدف الأطفال، مما يجعلها تجذب انتباههم بمشاهد ضارة...</p>
+
+    <p>إن ملء فراغ الطفل بالفيديوهات غير الموجّهة والاستعاضة عنها باللعب في الهواء الطلق، تزيد من ثقته بنفسه...</p>
+
+    <p><strong>انتهى ،،</strong></p>
+
+    <a href="../index.html" class="back-link">← العودة إلى الصفحة الرئيسية</a>
+  </main>
+
+  <footer>
+    <p>© 2025 المدونة العربية للثقافة والإعلام - جميع الحقوق محفوظة.</p>
+  </footer>
+</body>
+</html>
