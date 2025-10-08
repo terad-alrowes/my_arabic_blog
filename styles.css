@@ -306,8 +306,74 @@ footer {
   margin-top: 20px;
 }
 
+/* ====== تنسيق المقالات داخل المدونة ====== */
+.blog-post, .article, .post {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin: 40px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  line-height: 2.1;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  color: #333;
+}
+
+/* تنسيق العنوان */
+.blog-post .post-title, 
+.article .post-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-right: 5px solid #c0392b;
+  padding-right: 10px;
+}
+
+/* اسم الكاتب وتاريخ النشر */
+.post-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* الفقرات */
+.blog-post p, .article p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* الكلمات المفتاحية */
+.tags {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.tags span {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 5px 12px;
+  margin: 3px;
+  display: inline-block;
+}
+
+/* تحسين صورة المقال */
+.post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* تفاعل عند تمرير الماوس */
+.blog-post:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
 /* أنيميشن */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
