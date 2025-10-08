@@ -3,173 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 🟢 Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQBHVSQDCF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DQBHVSQDCF');
-  </script>
-
-  <!-- 🟢 Google Site Verification -->
-  <meta name="google-site-verification" content="27nd7tq8Bo_2iYFTdZ07J7iSS5ul2eYwskKA2WxJU-4" />
-
-  <!-- 🟢 معلومات الموقع -->
-  <title>المدونة العربية للثقافة والإعلام - د. طراد الرويس</title>
-  <meta name="description" content="المدونة العربية للثقافة والإعلام بإشراف د. طراد الرويس - منصة عربية تقدم مقالات ثقافية وفكرية وإعلامية تهدف إلى إثراء المحتوى العربي.">
-  <meta name="keywords" content="طراد الرويس, الثقافة العربية, الإعلام العربي, مدونة أدبية, الفكر العربي, إعلام وثقافة, مدونة عربية">
-  <meta name="author" content="د. طراد الرويس">
-
-  <!-- 🟢 تحسين المشاركة الاجتماعية -->
-  <meta property="og:title" content="المدونة العربية للثقافة والإعلام - د. طراد الرويس">
-  <meta property="og:description" content="منصة عربية ثقافية بإشراف د. طراد الرويس، تقدم محتوى مميز في الأدب والإعلام والفكر.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://terad-alrowes.github.io/my_arabic_blog/">
-  <meta property="og:image" content="https://terad-alrowes.github.io/my_arabic_blog/images/hero.jpg">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="المدونة العربية للثقافة والإعلام - د. طراد الرويس">
-  <meta name="twitter:description" content="مدونة عربية بإشراف د. طراد الرويس تهتم بالشأن الثقافي والإعلامي.">
-  <meta name="twitter:image" content="https://terad-alrowes.github.io/my_arabic_blog/images/hero.jpg">
-
-  <!-- 🟢 بيانات منظمة -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "المدونة العربية للثقافة والإعلام",
-    "url": "https://terad-alrowes.github.io/my_arabic_blog/",
-    "author": {
-      "@type": "Person",
-      "name": "د. طراد الرويس"
-    },
-    "description": "منصة ثقافية وإعلامية عربية تهتم بالأدب والفكر والإعلام بإشراف د. طراد الرويس.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "المدونة العربية للثقافة والإعلام"
-    }
-  }
-  </script>
-
-  <!-- 🟢 الأيقونة -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- خطوط عربية أنيقة -->
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- 🟢 ملف التنسيق -->
-  <link rel="stylesheet" href="styles.css">
+  <title>المدونة العربية للثقافة والإعلام</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <div class="logo">
-      <h1>المدونة العربية للثقافة والإعلام</h1>
+
+  <!-- 🟢 Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>المدونة العربية للثقافة والإعلام</h1>
+        <h2>من هنا تبدأ الحكاية الثقافية العربية... فكرٌ، إعلامٌ، وإبداع.</h2>
+        <p>نصنع محتوى يربط الأصالة بالتجديد، ويُعيد للثقافة العربية حضورها الرفيع في زمن السرعة.</p>
+        <a href="#posts" class="btn-primary">استكشف المقالات</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/author.png" alt="د. طراد الرويس">
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#articles">المقالات</a></li>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#contact">اتصل بنا</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section id="home" class="hero">
-    <h2>مرحباً بكم في المدونة العربية للثقافة والإعلام</h2>
-    <p>منصة ثقافية بإشراف د. طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.</p>
-  </section>
-
-  <section id="articles">
-    <h2>أحدث المقالات</h2>
-
-    <!-- 📰 المقال الأول -->
-    <article class="blog-post">
-      <img src="https://images.unsplash.com/photo-1601933470928-c8b6b3c3f3a3?auto=format&fit=crop&w=1200&q=80" alt="أطفال يشاهدون يوتيوب" class="post-image">
-
-      <h2 class="post-title">"يوتيوب" نافذة مفتوحة أمام عيون أطفالنا تسبب الرعب في قلوبهم وتدمر عقولهم</h2>
-
-      <div class="post-meta">
-        <span>✍️ بقلم: د. طراد علي بن سرحان الرويس</span> |
-        <span>🗓️ نُشر في: 7 أكتوبر 2025</span>
-      </div>
-
-      <p>أن منصة "يوتيوب" أصبحت نافذة مفتوحة أمام عيون الأطفال تسبب الرعب في قلوبهم وتدمر عقولهم، وذلك من خلال مشاهد مرعبة تتسلل إلى عقول الأطفال عبر "يوتيوب"، واضطرابات نفسية تهدد براءتهم...</p>
-
-      <p>إن ملء فراغ الطفل بالفيديوهات غير الموجّهة والاستعاضة عنها باللعب في الهواء الطلق، يزيد من ثقته بنفسه وصحته الجسدية والعقلية... <strong>ختاماً، ندعو الأسرة والمجتمع لمراقبة المحتوى الذي يتابعه أطفالهم.</strong></p>
-
-      <p class="article-end">انتهى ،،</p>
-
-      <div class="tags">
-        <strong>الكلمات المفتاحية:</strong> 
-        <span>يوتيوب</span>، <span>الأطفال</span>، <span>طراد الرويس</span>، 
-        <span>الإعلام الرقمي</span>، <span>الثقافة</span>
+  <!-- 🟠 قسم المقالات -->
+  <main id="posts" class="posts-grid">
+    <article class="post-card">
+      <img src="assets/article1.jpg" alt="صورة المقال">
+      <div class="post-content">
+        <h3><a href="post/2025-10-08-family-article.html">الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</a></h3>
+        <p>مقال تحليلي بقلم الكاتب والإعلامي د. طراد علي بن سرحان الرويس حول دور الأسرة العربية في ظل التحولات المعاصرة...</p>
+        <a href="post/2025-10-08-family-article.html" class="read-more">اقرأ المزيد</a>
       </div>
     </article>
 
-    /* تنسيق المقالات داخل المدونة */
-.article-content {
-  font-family: "Cairo", "Amiri", "Tajawal", sans-serif;
-  font-size: 17px;              /* حجم خط مريح للقراءة */
-  line-height: 1.9;             /* تباعد مثالي بين الأسطر */
-  color: #222;                  /* لون النص الأساسي */
-  text-align: justify;          /* محاذاة النص على الجانبين */
-  direction: rtl;               /* لضبط الكتابة بالعربية */
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-  margin-bottom: 30px;
-}
-
-.article-content h2, 
-.article-content h3 {
-  color: #004d7a;               /* لون مميز للعناوين داخل المقال */
-  margin-top: 20px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-.article-content p {
-  margin-bottom: 15px;
-}
-
-    <!-- 📰 المقال الثاني -->
-    <article class="article">
-      <h3>الإعلام العربي ودوره في بناء الوعي الثقافي</h3>
-      <p>يتناول هذا المقال دور الإعلام في تشكيل الفكر العربي وتعزيز الهوية الثقافية في مواجهة التحديات الحديثة.</p>
-      <p><a href="#">اقرأ المزيد...</a></p>
+    <article class="post-card">
+      <img src="assets/article2.jpg" alt="صورة المقال">
+      <div class="post-content">
+        <h3><a href="post/sample-article.html">التعليم والإعلام .. تكامل الأدوار لبناء وعي المجتمع</a></h3>
+        <p>مقال يسلط الضوء على أهمية تكامل المنظومتين التعليمية والإعلامية في تعزيز الهوية العربية وصناعة المستقبل.</p>
+        <a href="post/sample-article.html" class="read-more">اقرأ المزيد</a>
+      </div>
     </article>
-  </section>
+  </main>
 
-  <section id="about">
-    <h2>من نحن</h2>
-    <p>نحن مدونة عربية ثقافية وإعلامية، نسعى إلى إثراء المحتوى العربي من خلال مقالات فكرية وأدبية بإشراف الإعلامي والكاتب د. طراد الرويس.</p>
-  </section>
-
-  <section id="contact">
-    <h2>اتصل بنا</h2>
-    <form action="https://formspree.io/f/xrbykznz" method="POST">
-      <label for="name">الاسم:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">البريد الإلكتروني:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">الرسالة:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">إرسال</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 المدونة العربية للثقافة والإعلام - جميع الحقوق محفوظة.</p>
+  <!-- ⚫ Footer -->
+  <footer class="footer">
+    <p>منابر فكرية ورؤى إعلامية... بروح عربية أصيلة.</p>
+    <p>© 2025 جميع الحقوق محفوظة – د. طراد علي بن سرحان الرويس</p>
   </footer>
+
 </body>
 </html>
-
-
