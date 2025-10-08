@@ -1,9 +1,0 @@
-my_arabic_blog/
-│
-├── _layouts/
-│   └── post.html
-├── _posts/
-│   └── 2025-10-08-family-article.md
-├── assets/
-│   └── styles.css
-└── index.html   (إن وجد)
