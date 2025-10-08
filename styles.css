@@ -206,3 +206,69 @@ footer {
   margin-top: 60px;
   font-size: 0.9rem;
 }
+
+/* تنسيق فخم للمقالات داخل المدونة */
+.post-content {
+  font-family: "Tajawal", "Cairo", "Noto Kufi Arabic", sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #222;
+  text-align: justify;
+  background-color: #ffffff;
+  padding: 40px 60px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  margin: 40px auto;
+  max-width: 850px;
+  direction: rtl;
+}
+
+/* تنسيق العناوين داخل المقال */
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  font-family: "Cairo", "Tajawal", sans-serif;
+  font-weight: 700;
+  color: #004b6b;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+/* الفقرات داخل المقال */
+.post-content p {
+  margin-bottom: 20px;
+}
+
+/* الروابط داخل المقال */
+.post-content a {
+  color: #006b99;
+  text-decoration: none;
+  border-bottom: 1px dashed #006b99;
+  transition: color 0.3s ease;
+}
+
+.post-content a:hover {
+  color: #0099cc;
+  border-bottom: 1px solid #0099cc;
+}
+
+/* الصور داخل المقال */
+.post-content img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 25px auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* اقتباسات */
+.post-content blockquote {
+  border-right: 4px solid #006b99;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  margin: 25px 0;
+  font-style: italic;
+  color: #444;
+  border-radius: 6px;
+}
