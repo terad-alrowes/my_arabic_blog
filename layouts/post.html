@@ -3,65 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }} | المدونة العربية للثقافة والإعلام</title>
+  <title>{{ page.title }} - المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
-
 <body>
-  <!-- 🔹 رأس الصفحة -->
-  <header class="post-header">
-    <a href="../index.html" class="logo">المدونة العربية للثقافة والإعلام</a>
-    <nav>
-      <a href="../index.html">الرئيسية</a>
-      <a href="../about.html">عن المدونة</a>
-      <a href="../contact.html">اتصل بنا</a>
-    </nav>
+
+  <!-- ===== رأس الصفحة ===== -->
+  <header class="navbar post-header">
+    <div class="container">
+      <h1 class="logo">المدونة العربية للثقافة والإعلام</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../index.html#articles">المقالات</a></li>
+          <li><a href="../index.html#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- 🔹 قسم الغلاف (Hero Image) -->
-  {% if page.cover %}
-  <section class="post-hero" style="background-image: url('{{ page.cover }}');">
-    <div class="overlay">
-      <h1>{{ page.title }}</h1>
-      <p class="meta">
-        ✍️ بقلم: {{ page.author }} | 📅 {{ page.date | date: "%d %B %Y" }}
-      </p>
+  <!-- ===== صورة المقال ===== -->
+  <section class="post-hero" style="background-image: url('{{ page.image }}');">
+    <div class="overlay"></div>
+    <div class="post-title">
+      <h2>{{ page.title }}</h2>
+      <p class="post-author">{{ page.author }}</p>
     </div>
   </section>
-  {% endif %}
 
-  <!-- 🔹 محتوى المقال -->
-  <main class="post-content">
-    <article>
-      {% unless page.cover %}
-      <h1>{{ page.title }}</h1>
-      <p class="meta">
-        ✍️ بقلم: {{ page.author }} | 📅 {{ page.date | date: "%d %B %Y" }}
-      </p>
-      {% endunless %}
-
-      <div class="post-body">
-        {{ content }}
-      </div>
-    </article>
-
-    <!-- 🔹 الشريط الجانبي -->
-    <aside class="post-sidebar">
-      <h3>مقالات مميزة</h3>
-      <ul>
-        <li><a href="../posts/2025-10-08-family-article.html">الأسرة وبناء المجتمع</a></li>
-        <li><a href="../posts/culture-and-identity.html">الثقافة والهوية العربية</a></li>
-      </ul>
-
-      <div class="quote-box">
-        <p>“الثقافة ليست ترفاً فكرياً، بل هي نواة الوعي والحضارة.”</p>
-      </div>
-    </aside>
+  <!-- ===== محتوى المقال ===== -->
+  <main class="post-content container">
+    {{ content }}
   </main>
 
-  <!-- 🔹 التذييل -->
-  <footer>
-    <p>© 2025 المدونة العربية للثقافة والإعلام - بإشراف د. طراد الرويس</p>
+  <!-- ===== الفوتر ===== -->
+  <footer class="footer">
+    <p>© 2025 جميع الحقوق محفوظة - د. طراد علي بن سرحان الرويس</p>
   </footer>
+
 </body>
 </html>
