@@ -3,50 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title }} - المدونة العربية للثقافة والإعلام</title>
+  <title>{{ page.title }} | المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
-  <!-- ===== شريط العنوان ===== -->
-  <header class="main-header">
-    <div class="container">
-      <h1 class="blog-title">المدونة العربية للثقافة والإعلام</h1>
-      <p class="blog-subtitle">فكر عربي... ورؤية معاصرة</p>
-    </div>
+  <header class="post-header">
+    <a href="../index.html" class="logo">المدونة العربية للثقافة والإعلام</a>
+    <nav>
+      <a href="../index.html">الرئيسية</a>
+      <a href="../about.html">عن المدونة</a>
+      <a href="../contact.html">اتصل بنا</a>
+    </nav>
   </header>
 
-  <!-- ===== محتوى المقال ===== -->
-  <main class="post-page container">
-    <article class="post">
-      <h2 class="post-title">{{ page.title }}</h2>
-      <p class="post-meta">
-        بقلم: {{ page.author }} |
-        <span class="post-date">{{ page.date }}</span>
+  <main class="post-content">
+    <article>
+      <h1>{{ page.title }}</h1>
+      <p class="meta">
+        <span>✍️ بقلم: {{ page.author }}</span> |
+        <span>📅 {{ page.date | date: "%d %B %Y" }}</span>
       </p>
-
-      <div class="post-content">
+      <div class="post-body">
         {{ content }}
       </div>
-
-      <a href="../index.html" class="back-link">← العودة إلى الصفحة الرئيسية</a>
     </article>
+
+    <aside class="post-sidebar">
+      <h3>مقالات مميزة</h3>
+      <ul>
+        <li><a href="../posts/2025-10-08-family-article.html">الأسرة وبناء المجتمع</a></li>
+        <li><a href="../posts/culture-and-identity.html">الثقافة والهوية العربية</a></li>
+      </ul>
+
+      <div class="quote-box">
+        <p>“الثقافة ليست ترفاً فكرياً، بل هي نواة الوعي والحضارة.”</p>
+      </div>
+    </aside>
   </main>
 
-  <!-- ===== قسم الكاتب ===== -->
-  <section class="about-author">
-    <img src="../assets/author.png" alt="د. طراد الرويس" class="author-photo-lg" />
-    <div>
-      <h3>عن الكاتب</h3>
-      <p>
-        د. طراد علي بن سرحان الرويس – كاتب وإعلامي عربي يهتم بقضايا الثقافة والمجتمع والإعلام المعاصر، 
-        ويسعى لترسيخ الفكر العربي الأصيل في زمن العولمة والتغيرات المتسارعة.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== التذييل ===== -->
-  <footer class="footer">
-    <p>© 2025 جميع الحقوق محفوظة - د. طراد الرويس</p>
+  <footer>
+    <p>© 2025 المدونة العربية للثقافة والإعلام - بإشراف د. طراد الرويس</p>
   </footer>
 </body>
 </html>
