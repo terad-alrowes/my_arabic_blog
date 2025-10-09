@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }} - المدونة العربية للثقافة والإعلام</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <!-- ===== شريط العنوان ===== -->
+  <header class="main-header">
+    <div class="container">
+      <h1 class="blog-title">المدونة العربية للثقافة والإعلام</h1>
+      <p class="blog-subtitle">فكر عربي... ورؤية معاصرة</p>
+    </div>
+  </header>
+
+  <!-- ===== محتوى المقال ===== -->
+  <main class="post-page container">
+    <article class="post">
+      <h2 class="post-title">{{ page.title }}</h2>
+      <p class="post-meta">
+        بقلم: {{ page.author }} |
+        <span class="post-date">{{ page.date }}</span>
+      </p>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <a href="../index.html" class="back-link">← العودة إلى الصفحة الرئيسية</a>
+    </article>
+  </main>
+
+  <!-- ===== قسم الكاتب ===== -->
+  <section class="about-author">
+    <img src="../assets/author.png" alt="د. طراد الرويس" class="author-photo-lg" />
+    <div>
+      <h3>عن الكاتب</h3>
+      <p>
+        د. طراد علي بن سرحان الرويس – كاتب وإعلامي عربي يهتم بقضايا الثقافة والمجتمع والإعلام المعاصر، 
+        ويسعى لترسيخ الفكر العربي الأصيل في زمن العولمة والتغيرات المتسارعة.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== التذييل ===== -->
+  <footer class="footer">
+    <p>© 2025 جميع الحقوق محفوظة - د. طراد الرويس</p>
+  </footer>
+</body>
+</html>
