@@ -6,73 +6,62 @@
   <title>المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
+
 <body>
-  <!-- ===== شريط العنوان العلوي ===== -->
-  <header class="main-header">
-    <div class="container">
-      <h1 class="blog-title">المدونة العربية للثقافة والإعلام</h1>
-      <p class="blog-subtitle">فكر عربي... ورؤية معاصرة</p>
-    </div>
+  <!-- 🔹 رأس الصفحة -->
+  <header>
+    <a href="index.html" class="logo">المدونة العربية للثقافة والإعلام</a>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">عن المدونة</a>
+      <a href="contact.html">اتصل بنا</a>
+    </nav>
   </header>
 
-  <!-- ===== قسم الصورة الرئيسية (Hero Section) ===== -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="assets/author.png" alt="د. طراد الرويس" class="author-photo" />
-      <div>
-        <h2>مرحبًا بكم في فضاء الثقافة والإعلام العربي</h2>
-        <p>
-          نافذة عربية تسلط الضوء على الفكر والثقافة والإعلام برؤية
-          معاصرة... نناقش قضايا المجتمع ونحتفي بالإبداع العربي.
-        </p>
-      </div>
+  <!-- 🔹 قسم الغلاف (Hero) -->
+  <section class="hero" style="background-image: url('images/hero-dr-trad.jpg');">
+    <div class="overlay">
+      <h1>المدونة العربية للثقافة والإعلام</h1>
+      <p>نافذة عربية تحمل فكرًا.. ووعيًا.. وهوية.</p>
+      <a href="#latest-posts" class="btn">تصفح المقالات</a>
     </div>
   </section>
 
-  <!-- ===== قسم المقالات ===== -->
-  <main class="posts container">
-    <article class="post-card">
-      <img src="assets/family.jpg" alt="الأسرة العربية" class="post-image" />
-      <div class="post-content">
-        <h3>الأسرة العربية وتعظيم دورها في عصر تتسارع فيه التغيرات</h3>
-        <p>
-          مقال يسلط الضوء على أهمية دور الأسرة العربية في الحفاظ على
-          القيم والهوية في زمن التحولات السريعة، ويؤكد دورها في بناء
-          المجتمع الحديث.
-        </p>
-        <a href="posts/2025-10-08-family-article.html" class="read-more">اقرأ المزيد</a>
-      </div>
-    </article>
+  <!-- 🔹 قسم المقالات الحديثة -->
+  <main id="latest-posts" class="home-content">
+    <h2>أحدث المقالات</h2>
+    <div class="posts-grid">
 
-    <article class="post-card">
-      <img src="assets/youtube.jpg" alt="يوتيوب والأطفال" class="post-image" />
-      <div class="post-content">
-        <h3>يوتيوب.. نافذة تفتح عقول أطفالنا على المجهول</h3>
-        <p>
-          كيف يؤثر المحتوى المرئي على وعي أطفالنا؟ رؤية نقدية لتحديات
-          المنصات الرقمية وأثرها على الأجيال الجديدة.
-        </p>
-        <a href="posts/2025-09-30-youtube-article.html" class="read-more">اقرأ المزيد</a>
-      </div>
-    </article>
+      <!-- 📝 المقال الأول -->
+      <article class="post-card">
+        <img src="images/family-hero.jpg" alt="الأسرة العربية" />
+        <div class="post-info">
+          <h3>الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</h3>
+          <p>
+            في عصر تتسارع فيه المتغيرات وتتعقد فيه الحياة، تبقى الأسرة هي اللبنة الأساسية في بناء المجتمع وتنميته...
+          </p>
+          <a href="posts/2025-10-08-family-article.html" class="read-more">اقرأ المزيد →</a>
+        </div>
+      </article>
+
+      <!-- 📝 المقال الثاني -->
+      <article class="post-card">
+        <img src="images/culture-identity.jpg" alt="الثقافة والهوية العربية" />
+        <div class="post-info">
+          <h3>الثقافة والهوية العربية .. بين الأصالة والتجديد</h3>
+          <p>
+            الثقافة ليست ترفًا فكريًا، بل هي نواة الوعي الجمعي التي تحفظ هوية الأمة وتوجه مسيرتها نحو المستقبل...
+          </p>
+          <a href="posts/culture-and-identity.html" class="read-more">اقرأ المزيد →</a>
+        </div>
+      </article>
+
+    </div>
   </main>
 
-  <!-- ===== قسم عن الكاتب ===== -->
-  <section class="about-author">
-    <img src="assets/author.png" alt="د. طراد الرويس" class="author-photo-lg" />
-    <div>
-      <h3>عن الكاتب</h3>
-      <p>
-        د. طراد علي بن سرحان الرويس – كاتب وإعلامي عربي يهتم بقضايا الثقافة
-        والمجتمع والإعلام المعاصر، ويسعى لترسيخ الفكر العربي الأصيل
-        في زمن العولمة والتغيرات المتسارعة.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== التذييل ===== -->
-  <footer class="footer">
-    <p>© 2025 جميع الحقوق محفوظة - د. طراد الرويس</p>
+  <!-- 🔹 التذييل -->
+  <footer>
+    <p>© 2025 المدونة العربية للثقافة والإعلام - إشراف د. طراد علي بن سرحان الرويس</p>
   </footer>
 </body>
 </html>
