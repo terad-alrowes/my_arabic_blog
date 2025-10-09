@@ -1,208 +1,181 @@
-/* ========== القواعد العامة ========== */
+/* 🌿 الأساسيات العامة */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
 body {
-  font-family: "Cairo", "Amiri", sans-serif;
-  background-color: #faf7f1;
-  color: #222;
+  font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f6f2;
+  color: #222;
   line-height: 1.8;
 }
 
-/* الحاويات */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ========== الرأس العلوي ========== */
-.main-header {
-  background: linear-gradient(135deg, #b38b2e, #e5c67a);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog-title {
-  font-size: 2.3rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-.blog-subtitle {
-  font-size: 1.2rem;
-  margin-top: 0.3rem;
-  color: #fffbe9;
-}
-
-/* ========== قسم الـ Hero ========== */
-.hero {
-  background-color: #fff;
-  border-bottom: 2px solid #e8e0cb;
-  padding: 2rem 0;
-}
-
-.hero-content {
+/* 🌟 الرأس */
+header {
+  background: linear-gradient(135deg, #8b5e3b, #c9a66b);
+  color: white;
+  padding: 20px 40px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  text-align: right;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-.hero-content img.author-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 4px solid #b38b2e;
-  object-fit: cover;
+header .logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
 }
 
-.hero-content h2 {
-  color: #b38b2e;
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content p {
-  max-width: 550px;
-  font-size: 1rem;
-  color: #333;
-}
-
-/* ========== بطاقات المقالات ========== */
-.posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto;
-}
-
-.post-card {
-  background-color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.post-card:hover {
-  transform: translateY(-6px);
-}
-
-.post-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.post-content {
-  padding: 1.2rem;
-}
-
-.post-content h3 {
-  color: #b38b2e;
-  margin-top: 0;
-}
-
-.post-content p {
-  color: #444;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.read-more {
-  display: inline-block;
-  color: #fff;
-  background-color: #b38b2e;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+header nav a {
+  color: white;
+  margin-left: 20px;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.read-more:hover {
-  background-color: #8e6c1c;
+header nav a:hover {
+  color: #ffe8b2;
 }
 
-/* ========== صفحة المقال الفردي ========== */
-.post-page {
-  background-color: #fff;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.post-title {
-  color: #b38b2e;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.post-meta {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-}
-
-.post-content p {
-  margin-bottom: 1.2rem;
-  color: #333;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 1.5rem;
-  text-decoration: none;
-  color: #b38b2e;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* ========== عن الكاتب ========== */
-.about-author {
-  background-color: #f8f3e8;
-  padding: 2rem;
-  margin-top: 2rem;
+/* 🖼️ قسم الغلاف (Hero) */
+.post-hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 45vh;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
-.author-photo-lg {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #b38b2e;
-  object-fit: cover;
+.post-hero .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
 }
 
-.about-author h3 {
-  color: #b38b2e;
-  margin-bottom: 0.5rem;
+.post-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.about-author p {
-  max-width: 600px;
-  color: #333;
-  font-size: 1rem;
+.post-hero .meta {
+  font-size: 0.95rem;
+  color: #e5e5e5;
 }
 
-/* ========== التذييل ========== */
-.footer {
+/* ✍️ محتوى المقال */
+main.post-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 40px auto;
+  padding: 0 40px;
+  max-width: 1200px;
+}
+
+article {
+  flex: 1 1 65%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+article h1 {
+  color: #8b5e3b;
+  font-size: 1.8rem;
+}
+
+article .meta {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+article p {
+  text-align: justify;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* 📚 الشريط الجانبي */
+.post-sidebar {
+  flex: 1 1 30%;
+  background: #fff8ef;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.post-sidebar h3 {
+  color: #8b5e3b;
+  border-bottom: 2px solid #c9a66b;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.post-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.post-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.post-sidebar ul li a {
+  text-decoration: none;
+  color: #5a3f2e;
+  transition: color 0.3s ease;
+}
+
+.post-sidebar ul li a:hover {
+  color: #b57d4b;
+}
+
+.quote-box {
+  background: #fff3da;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 25px;
+  font-style: italic;
   text-align: center;
-  background-color: #b38b2e;
-  color: #fff;
-  padding: 1rem 0;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  color: #5a3f2e;
+}
+
+/* ⚙️ التذييل */
+footer {
+  text-align: center;
+  background-color: #8b5e3b;
+  color: white;
+  padding: 15px;
+  font-size: 0.95rem;
+  margin-top: 50px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+/* 📱 التصميم المتجاوب */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main.post-content {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  article, .post-sidebar {
+    flex: 1 1 100%;
+  }
 }
