@@ -210,6 +210,64 @@ footer {
   margin-bottom: 20px;
 }
 
+/* 🌿 صفحة عن المدونة */
+.about-hero, .contact-hero {
+  text-align: center;
+  background: linear-gradient(135deg, #8b5e3b, #c9a66b);
+  color: white;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  border-radius: 0 0 40px 40px;
+}
+
+.about-content, .contact-form-section {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.about-content blockquote {
+  border-right: 4px solid #c9a66b;
+  padding-right: 15px;
+  color: #8b5e3b;
+  font-style: italic;
+  margin: 25px 0;
+}
+
+/* 💬 نموذج الاتصال */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #c9a66b;
+  color: #222;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffe8b2;
+}
+
 .btn {
   background: #c9a66b;
   color: #222;
