@@ -6,62 +6,97 @@
   <title>المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-
 <body>
-  <!-- 🔹 رأس الصفحة -->
-  <header>
-    <a href="index.html" class="logo">المدونة العربية للثقافة والإعلام</a>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن المدونة</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
+
+  <!-- ===== شريط التنقل ===== -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">المدونة العربية للثقافة والإعلام</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="#about">عن المدونة</a></li>
+          <li><a href="#articles">المقالات</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- 🔹 قسم الغلاف (Hero) -->
-  <section class="hero" style="background-image: url('images/hero-dr-trad.jpg');">
-    <div class="overlay">
-      <h1>المدونة العربية للثقافة والإعلام</h1>
-      <p>نافذة عربية تحمل فكرًا.. ووعيًا.. وهوية.</p>
-      <a href="#latest-posts" class="btn">تصفح المقالات</a>
+  <!-- ===== قسم الـ Hero ===== -->
+  <section class="hero" style="background-image: url('assets/images/hero-bg.jpg');">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="assets/images/author.png" alt="د. طراد الرويس" class="author-image" />
+      <h2>مرحبًا بكم في المدونة العربية للثقافة والإعلام</h2>
+      <p>نافذة عربية تحمل فكرًا، ووعيًا، وهوية.</p>
+      <a href="#articles" class="btn">استكشف المقالات</a>
     </div>
   </section>
 
-  <!-- 🔹 قسم المقالات الحديثة -->
-  <main id="latest-posts" class="home-content">
-    <h2>أحدث المقالات</h2>
-    <div class="posts-grid">
-
-      <!-- 📝 المقال الأول -->
-      <article class="post-card">
-        <img src="images/family-hero.jpg" alt="الأسرة العربية" />
-        <div class="post-info">
-          <h3>الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</h3>
-          <p>
-            في عصر تتسارع فيه المتغيرات وتتعقد فيه الحياة، تبقى الأسرة هي اللبنة الأساسية في بناء المجتمع وتنميته...
-          </p>
-          <a href="posts/2025-10-08-family-article.html" class="read-more">اقرأ المزيد →</a>
-        </div>
-      </article>
-
-      <!-- 📝 المقال الثاني -->
-      <article class="post-card">
-        <img src="images/culture-identity.jpg" alt="الثقافة والهوية العربية" />
-        <div class="post-info">
-          <h3>الثقافة والهوية العربية .. بين الأصالة والتجديد</h3>
-          <p>
-            الثقافة ليست ترفًا فكريًا، بل هي نواة الوعي الجمعي التي تحفظ هوية الأمة وتوجه مسيرتها نحو المستقبل...
-          </p>
-          <a href="posts/culture-and-identity.html" class="read-more">اقرأ المزيد →</a>
-        </div>
-      </article>
-
+  <!-- ===== قسم عن المدونة ===== -->
+  <section id="about" class="about" style="background-image: url('assets/images/about-bg.jpg');">
+    <div class="container">
+      <h2>عن المدونة</h2>
+      <p>
+        هذه المدونة الثقافية الإعلامية جاءت لتكون منبرًا عربيًا يجمع بين الأصالة والمعاصرة،
+        ويعكس الفكر العربي الواعي الذي يسعى لبناء نهضة ثقافية متجددة، تعانق الحاضر وتستند إلى
+        القيم العربية والإسلامية الأصيلة.
+      </p>
     </div>
-  </main>
+  </section>
 
-  <!-- 🔹 التذييل -->
-  <footer>
-    <p>© 2025 المدونة العربية للثقافة والإعلام - إشراف د. طراد علي بن سرحان الرويس</p>
+  <!-- ===== قسم المقالات ===== -->
+  <section id="articles" class="articles">
+    <div class="container">
+      <h2>أحدث المقالات</h2>
+      <div class="articles-grid">
+        <!-- المقال الأول -->
+        <article class="post-card">
+          <img src="assets/images/post-family.jpg" alt="الأسرة العربية" />
+          <div class="post-content">
+            <h3><a href="posts/2025-10-08-family-article.html">الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</a></h3>
+            <p>بقلم: الكاتب والإعلامي د. طراد علي بن سرحان الرويس</p>
+            <p class="excerpt">
+              في عصر تتسارع فيه التغيرات وتتعقد فيه التحديات، تبقى الأسرة العربية حجر الزاوية في بناء الوعي والهوية...
+            </p>
+            <a href="posts/2025-10-08-family-article.html" class="read-more">اقرأ المزيد</a>
+          </div>
+        </article>
+
+        <!-- المقال الثاني (نموذج لمقال ثقافي آخر) -->
+        <article class="post-card">
+          <img src="assets/images/post-culture.jpg" alt="الثقافة العربية" />
+          <div class="post-content">
+            <h3><a href="#">الثقافة العربية بين الذاكرة والحداثة</a></h3>
+            <p>بقلم: د. طراد علي بن سرحان الرويس</p>
+            <p class="excerpt">
+              الثقافة العربية ليست ماضٍ نتمسك به فحسب، بل مستقبل نبنيه بالوعي والإبداع والحوار.
+            </p>
+            <a href="#" class="read-more">اقرأ المزيد</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== قسم التواصل ===== -->
+  <section id="contact" class="contact" style="background-image: url('assets/images/contact-bg.jpg');">
+    <div class="container">
+      <h2>تواصل معنا</h2>
+      <form>
+        <input type="text" placeholder="الاسم الكامل" required />
+        <input type="email" placeholder="البريد الإلكتروني" required />
+        <textarea placeholder="رسالتك" required></textarea>
+        <button type="submit" class="btn">إرسال</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== الفوتر ===== -->
+  <footer class="footer">
+    <p>© 2025 جميع الحقوق محفوظة - د. طراد علي بن سرحان الرويس</p>
   </footer>
+
 </body>
 </html>
