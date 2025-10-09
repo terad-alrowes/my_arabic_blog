@@ -6,7 +6,9 @@
   <title>{{ page.title }} | المدونة العربية للثقافة والإعلام</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
+  <!-- 🔹 رأس الصفحة -->
   <header class="post-header">
     <a href="../index.html" class="logo">المدونة العربية للثقافة والإعلام</a>
     <nav>
@@ -16,18 +18,34 @@
     </nav>
   </header>
 
-  <main class="post-content">
-    <article>
+  <!-- 🔹 قسم الغلاف (Hero Image) -->
+  {% if page.cover %}
+  <section class="post-hero" style="background-image: url('{{ page.cover }}');">
+    <div class="overlay">
       <h1>{{ page.title }}</h1>
       <p class="meta">
-        <span>✍️ بقلم: {{ page.author }}</span> |
-        <span>📅 {{ page.date | date: "%d %B %Y" }}</span>
+        ✍️ بقلم: {{ page.author }} | 📅 {{ page.date | date: "%d %B %Y" }}
       </p>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- 🔹 محتوى المقال -->
+  <main class="post-content">
+    <article>
+      {% unless page.cover %}
+      <h1>{{ page.title }}</h1>
+      <p class="meta">
+        ✍️ بقلم: {{ page.author }} | 📅 {{ page.date | date: "%d %B %Y" }}
+      </p>
+      {% endunless %}
+
       <div class="post-body">
         {{ content }}
       </div>
     </article>
 
+    <!-- 🔹 الشريط الجانبي -->
     <aside class="post-sidebar">
       <h3>مقالات مميزة</h3>
       <ul>
@@ -41,6 +59,7 @@
     </aside>
   </main>
 
+  <!-- 🔹 التذييل -->
   <footer>
     <p>© 2025 المدونة العربية للثقافة والإعلام - بإشراف د. طراد الرويس</p>
   </footer>
