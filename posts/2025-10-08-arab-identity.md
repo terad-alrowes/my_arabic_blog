@@ -4,7 +4,7 @@ title: "نحو وحدة شعبية وطنية عربية لمستقبل واحد
 author: د. طراد علي بن سرحان الرويس
 date: 2025-10-08
 categories: [النهضة, الهوية العربية, فكر عربي]
-image: /assets/images/Arab-identity.jpg
+image: /assets/images/arab-identity.jpg
 description: نحن أمة عربية في حاجة ماسة إلى إشاعة وتعميم الوحدة الوطنية المستندة على قيم الحوار والتسامح وقبول الاخر. 
 ---
 
