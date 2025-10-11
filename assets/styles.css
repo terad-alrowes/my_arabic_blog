@@ -1,330 +1,97 @@
-/* ========== الإعدادات العامة ========== */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
-
-:root {
-  --gold: #c8a75e;
-  --dark-brown: #4a3f35;
-  --ivory: #f8f4ec;
-  --light-gold: #e8d8b9;
-}
-
-* {
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: #faf8f5;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Tajawal', sans-serif;
-  background-color: var(--ivory);
-  color: var(--dark-brown);
+  color: #222;
   line-height: 1.8;
 }
 
-/* ========== شريط التنقل ========== */
-.navbar {
-  background-color: var(--dark-brown);
-  color: white;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.navbar .container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.3rem;
-  color: var(--gold);
-  font-weight: bold;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--gold);
-}
-
-/* ========== قسم الـHero ========== */
-.hero {
-  height: 90vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
+header.site-header {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-}
-
-.author-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid var(--gold);
-  margin-bottom: 15px;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--light-gold);
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: var(--gold);
+  background: linear-gradient(135deg, #a57b43, #d1b48c);
   color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
+  padding: 2rem 1rem;
+  border-bottom: 4px solid #c4a168;
 }
 
-.btn:hover {
-  background-color: var(--dark-brown);
-}
-
-/* ========== قسم عن المدونة ========== */
-.about {
-  padding: 80px 0;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 1.8rem;
-  color: var(--dark-brown);
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 700px;
-  margin: auto;
-  color: #333;
-  font-size: 1.05rem;
-}
-
-/* ========== قسم المقالات ========== */
-.articles {
-  padding: 80px 0;
-}
-
-.articles h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  color: var(--dark-brown);
-}
-
-.articles-grid {
+.post-list {
+  max-width: 1100px;
+  margin: 3rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  width: 90%;
-  margin: auto;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .post-card {
-  background-color: white;
-  border-radius: 15px;
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .post-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
 }
 
 .post-content {
-  padding: 20px;
+  padding: 1rem 1.5rem;
 }
 
-.post-content h3 {
+.post-content h2 {
+  color: #7b4a18;
   font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: var(--dark-brown);
 }
 
-.post-content p {
-  font-size: 0.95rem;
-  color: #444;
+.post-content .excerpt {
+  color: #555;
+  margin-top: 0.5rem;
 }
 
 .read-more {
   display: inline-block;
-  margin-top: 10px;
-  color: var(--gold);
+  margin-top: 0.8rem;
+  color: #a57b43;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .read-more:hover {
-  color: var(--dark-brown);
+  text-decoration: underline;
 }
 
-/* ========== قسم التواصل ========== */
-.contact {
-  padding: 80px 0;
-  background-size: cover;
-  background-position: center;
+.post-hero img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-bottom: 3px solid #c4a168;
+}
+
+.post-body {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.post-footer {
   text-align: center;
+  margin: 3rem 0;
 }
 
-.contact h2 {
-  color: var(--dark-brown);
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input, form textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: inherit;
-  resize: none;
-}
-
-form button {
-  align-self: center;
-  background-color: var(--gold);
-  color: white;
-  padding: 10px 30px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form button:hover {
-  background-color: var(--dark-brown);
-}
-
-/* ========== صفحة المقال الفردي ========== */
-.post-hero {
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.post-hero .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.45);
-}
-
-.post-title {
-  position: relative;
-  z-index: 2;
-}
-
-.post-title h2 {
-  font-size: 1.8rem;
-  color: var(--light-gold);
-}
-
-.post-author {
-  color: #f1e6ca;
-  font-size: 1rem;
-}
-
-.post-content {
-  background-color: white;
-  padding: 40px 20px;
-  border-radius: 12px;
-  margin: 40px auto;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  max-width: 800px;
-  line-height: 2;
-}
-
-/* ========== الفوتر ========== */
-.footer {
-  background-color: var(--dark-brown);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  border-top: 3px solid var(--gold);
-}
-
-/* ========== تجاوبية الهواتف ========== */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .navbar .container {
-    flex-direction: column;
-  }
-
-  .articles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .post-content {
-    padding: 20px;
-  }
+.back-home {
+  color: #a57b43;
+  text-decoration: none;
+  font-weight: bold;
 }
