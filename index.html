@@ -1,35 +1,151 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>المدونة العربية للثقافة والإعلام</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    /* --- القسم العلوي (Hero) --- */
+    header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                  url('assets/hero-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+    header a {
+      background-color: #d4af37;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    header a:hover {
+      background-color: #c29b2e;
+    }
+
+    /* --- قسم المقالات --- */
+    section.posts {
+      padding: 70px 8%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    .post-card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .post-card:hover {
+      transform: translateY(-6px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 20px;
+    }
+    .post-content h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #222;
+    }
+    .post-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+      margin: 12px 0 20px;
+    }
+    .post-content a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* --- الفوتر --- */
+    footer {
+      background-color: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
+
+  <header>
     <h1>المدونة العربية للثقافة والإعلام</h1>
-    <p class="subtitle">منبر للفكر العربي.. نحو وعي ونهضة</p>
+    <p>فكر عربي .. وهوية أصيلة .. ورسالة إعلامية بنّاءة</p>
+    <a href="#posts">تصفح المقالات</a>
   </header>
 
-  <main class="post-list">
-    {% for post in site.posts %}
-      <article class="post-card">
-        <a href="{{ post.url }}">
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        </a>
-        <div class="post-content">
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p class="meta">✍ {{ post.author }} | {{ post.date | date: "%Y-%m-%d" }}</p>
-          <p class="excerpt">{{ post.description }}</p>
-          <a href="{{ post.url }}" class="read-more">اقرأ المزيد →</a>
-        </div>
-      </article>
-    {% endfor %}
-  </main>
+  <section id="posts" class="posts">
+    <div class="post-card">
+      <img src="assets/family-article.jpg" alt="الأسرة العربية">
+      <div class="post-content">
+        <h3>الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</h3>
+        <p>بقلم: الكاتب والإعلامي طراد علي بن سرحان الرويس<br>مقال تربوي يعمّق فهمنا لدور الأسرة في بناء المجتمع العربي الحديث.</p>
+        <a href="_posts/2025-10-08-family-article.md">اقرأ المزيد</a>
+      </div>
+    </div>
 
-  <footer class="site-footer">
-    <p>© 2025 المدونة العربية للثقافة والإعلام | بإشراف د. طراد الرويس</p>
+    <div class="post-card">
+      <img src="assets/youtube-children.jpg" alt="يوتيوب والأطفال">
+      <div class="post-content">
+        <h3>"يوتيوب" نافذة مفتوحة أمام عيون أطفالنا</h3>
+        <p>بقلم: د. طراد علي بن سرحان الرويس<br>تحقيق صحفي يناقش المخاطر النفسية والثقافية التي تواجه الأطفال في عالم اليوتيوب.</p>
+        <a href="_posts/2025-10-05-youtube-article.md">اقرأ المزيد</a>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="assets/internet-war.jpg" alt="الإنترنت حرب القيم">
+      <div class="post-content">
+        <h3>"الإنترنت" .. حرب قيم صامتة تُشن على أبنائنا</h3>
+        <p>بقلم: الكاتب والإعلامي طراد علي بن سرحان الرويس<br>قراءة عميقة في الحرب الرقمية وتأثيرها على الأسرة العربية وهويتها.</p>
+        <a href="_posts/2025-10-07-internet-article.md">اقرأ المزيد</a>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <img src="assets/unity-arab.jpg" alt="تعزيز وحدتنا">
+      <div class="post-content">
+        <h3>تعزيز وحدتنا .. لتحقيق نهضتنا العربية</h3>
+        <p>بقلم: طراد علي بن سرحان الرويس<br>رؤية فكرية تدعو لتجديد الوعي العربي وتعزيز التضامن لبناء نهضة شاملة.</p>
+        <a href="_posts/2025-10-09-unity-article.md">اقرأ المزيد</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 المدونة العربية للثقافة والإعلام – جميع الحقوق محفوظة
   </footer>
+
 </body>
 </html>
