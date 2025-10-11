@@ -1,175 +1,330 @@
-/* إعدادات عامة */
-body {
-  font-family: "Amiri", "Tahoma", serif;
-  background-color: #faf5ef;
-  color: #3e2723;
-  line-height: 1.9;
+/* ========== الإعدادات العامة ========== */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+:root {
+  --gold: #c8a75e;
+  --dark-brown: #4a3f35;
+  --ivory: #f8f4ec;
+  --light-gold: #e8d8b9;
+}
+
+* {
   margin: 0;
   padding: 0;
-  direction: rtl;
+  box-sizing: border-box;
 }
 
-/* الهيدر */
-header {
-  background: linear-gradient(135deg, #4e342e, #6d4c41, #8d6e63);
-  color: #f9f6f2;
-  text-align: center;
-  padding: 3rem 1rem;
-  border-bottom: 6px solid #d4af37;
-  position: relative;
-  overflow: hidden;
-}
-
-/* زخرفة ذهبية واضحة */
-header::before, header::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Islamic_star_pattern.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-}
-
-header::before { top: -30px; right: -30px; }
-header::after { bottom: -30px; left: -30px; }
-
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 0 0 12px #d4af37;
-}
-
-header p {
-  margin-top: 0.6rem;
-  font-size: 1.4rem;
-  color: #fceabb;
-  text-shadow: 0 0 6px #8d6e63;
-}
-
-/* شريط التنقل */
-nav {
-  background: #3e2723;
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 4px solid #d4af37;
-}
-
-nav a {
-  color: #fceabb;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  color: #d4af37;
-  text-shadow: 0 0 10px #d4af37;
-}
-
-/* المقالات */
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-article {
-  background: #fffdf8;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 15px;
-  border: 2px solid #d4af37;
-  box-shadow: 0 4px 14px rgba(62, 39, 35, 0.2);
-  position: relative;
-}
-
-article h2 {
-  color: #4e342e;
-  margin-top: 0;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #d4af37;
-  display: inline-block;
-  padding-bottom: 0.3rem;
-}
-
-article p {
-  font-size: 1.1rem;
-  color: #3e2723;
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--ivory);
+  color: var(--dark-brown);
   line-height: 1.8;
-  margin-bottom: 1rem;
 }
 
-article img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin: 1rem 0;
-  border: 2px solid #d4af37;
-  box-shadow: 0 4px 10px rgba(62, 39, 35, 0.2);
+/* ========== شريط التنقل ========== */
+.navbar {
+  background-color: var(--dark-brown);
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* القائمة الجانبية */
-aside {
-  background: #fff8f2;
-  padding: 1.5rem;
-  margin: 2rem auto;
-  max-width: 900px;
-  border-radius: 12px;
-  border: 2px solid #d4af37;
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* الفوتر */
-footer {
+.logo {
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--gold);
+}
+
+/* ========== قسم الـHero ========== */
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
   text-align: center;
-  padding: 2rem 1rem;
-  background: #3e2723;
-  color: #fceabb;
-  border-top: 4px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-footer a {
-  color: #d4af37;
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.author-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--light-gold);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--gold);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
   text-decoration: none;
 }
 
-footer a:hover {
-  text-shadow: 0 0 8px #d4af37;
+.btn:hover {
+  background-color: var(--dark-brown);
 }
 
-/* أزرار */
-button, .btn {
-  background: #d4af37;
-  color: #3e2723;
-  border: none;
-  padding: 0.7rem 1.5rem;
+/* ========== قسم عن المدونة ========== */
+.about {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+/* ========== قسم المقالات ========== */
+.articles {
+  padding: 80px 0;
+}
+
+.articles h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--dark-brown);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 90%;
+  margin: auto;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--dark-brown);
+}
+
+.post-content p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  color: var(--dark-brown);
+}
+
+/* ========== قسم التواصل ========== */
+.contact {
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--dark-brown);
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  font-family: inherit;
+  resize: none;
+}
+
+form button {
+  align-self: center;
+  background-color: var(--gold);
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-button:hover, .btn:hover {
-  background: #fceabb;
-  box-shadow: 0 0 10px #d4af37;
+form button:hover {
+  background-color: var(--dark-brown);
 }
 
-/* استجابة الهواتف */
+/* ========== صفحة المقال الفردي ========== */
+.post-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.post-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.post-title {
+  position: relative;
+  z-index: 2;
+}
+
+.post-title h2 {
+  font-size: 1.8rem;
+  color: var(--light-gold);
+}
+
+.post-author {
+  color: #f1e6ca;
+  font-size: 1rem;
+}
+
+.post-content {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  line-height: 2;
+}
+
+/* ========== الفوتر ========== */
+.footer {
+  background-color: var(--dark-brown);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--gold);
+}
+
+/* ========== تجاوبية الهواتف ========== */
 @media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
+  .hero h2 {
+    font-size: 1.5rem;
   }
 
-  header h1 {
-    font-size: 2.2rem;
+  .navbar .container {
+    flex-direction: column;
   }
 
-  main, aside {
-    padding: 0 0.5rem;
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-content {
+    padding: 20px;
   }
 }
