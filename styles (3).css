@@ -1,0 +1,208 @@
+/* ========== القواعد العامة ========== */
+body {
+  font-family: "Cairo", "Amiri", sans-serif;
+  background-color: #faf7f1;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* الحاويات */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== الرأس العلوي ========== */
+.main-header {
+  background: linear-gradient(135deg, #b38b2e, #e5c67a);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+  font-size: 2.3rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.blog-subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: #fffbe9;
+}
+
+/* ========== قسم الـ Hero ========== */
+.hero {
+  background-color: #fff;
+  border-bottom: 2px solid #e8e0cb;
+  padding: 2rem 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.hero-content img.author-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #b38b2e;
+  object-fit: cover;
+}
+
+.hero-content h2 {
+  color: #b38b2e;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  max-width: 550px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ========== بطاقات المقالات ========== */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto;
+}
+
+.post-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+}
+
+.post-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1.2rem;
+}
+
+.post-content h3 {
+  color: #b38b2e;
+  margin-top: 0;
+}
+
+.post-content p {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  color: #fff;
+  background-color: #b38b2e;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  background-color: #8e6c1c;
+}
+
+/* ========== صفحة المقال الفردي ========== */
+.post-page {
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.post-title {
+  color: #b38b2e;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #b38b2e;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== عن الكاتب ========== */
+.about-author {
+  background-color: #f8f3e8;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.author-photo-lg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #b38b2e;
+  object-fit: cover;
+}
+
+.about-author h3 {
+  color: #b38b2e;
+  margin-bottom: 0.5rem;
+}
+
+.about-author p {
+  max-width: 600px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* ========== التذييل ========== */
+.footer {
+  text-align: center;
+  background-color: #b38b2e;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
