@@ -1,45 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - المدونة العربية للثقافة والإعلام</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
-  <!-- ===== رأس الصفحة ===== -->
-  <header class="navbar post-header">
-    <div class="container">
-      <h1 class="logo">المدونة العربية للثقافة والإعلام</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">الرئيسية</a></li>
-          <li><a href="../index.html#articles">المقالات</a></li>
-          <li><a href="../index.html#contact">تواصل معنا</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">✍ {{ page.author }} | {{ page.date | date: "%Y-%m-%d" }}</p>
   </header>
 
-  <!-- ===== صورة المقال ===== -->
-  <section class="post-hero" style="background-image: url('{{ page.image }}');">
-    <div class="overlay"></div>
-    <div class="post-title">
-      <h2>{{ page.title }}</h2>
-      <p class="post-author">{{ page.author }}</p>
-    </div>
+  <section class="post-hero">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
   </section>
 
-  <!-- ===== محتوى المقال ===== -->
-  <main class="post-content container">
+  <article class="post-body">
     {{ content }}
-  </main>
+  </article>
 
-  <!-- ===== الفوتر ===== -->
-  <footer class="footer">
-    <p>© 2025 جميع الحقوق محفوظة - د. طراد علي بن سرحان الرويس</p>
+  <footer class="post-footer">
+    <a href="/" class="back-home">← العودة إلى الرئيسية</a>
   </footer>
-
 </body>
 </html>
