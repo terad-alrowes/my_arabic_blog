@@ -1,102 +1,35 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>المدونة العربية للثقافة والإعلام</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-
-  <!-- ===== شريط التنقل ===== -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">المدونة العربية للثقافة والإعلام</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">الرئيسية</a></li>
-          <li><a href="#about">عن المدونة</a></li>
-          <li><a href="#articles">المقالات</a></li>
-          <li><a href="#contact">تواصل معنا</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="site-header">
+    <h1>المدونة العربية للثقافة والإعلام</h1>
+    <p class="subtitle">منبر للفكر العربي.. نحو وعي ونهضة</p>
   </header>
 
-  <!-- ===== قسم الـ Hero ===== -->
-  <section class="hero" style="background-image: url('assets/images/hero-bg.jpg');">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="assets/images/author.png" alt="الكاتب والإعلامي طراد الرويس" class="author-image" />
-      <h2>مرحبًا بكم في المدونة العربية للثقافة والإعلام</h2>
-      <p>نافذة عربية تحمل فكرًا، ووعيًا، وهوية.</p>
-      <a href="#articles" class="btn">استكشف المقالات</a>
-    </div>
-  </section>
+  <main class="post-list">
+    {% for post in site.posts %}
+      <article class="post-card">
+        <a href="{{ post.url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+        <div class="post-content">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p class="meta">✍ {{ post.author }} | {{ post.date | date: "%Y-%m-%d" }}</p>
+          <p class="excerpt">{{ post.description }}</p>
+          <a href="{{ post.url }}" class="read-more">اقرأ المزيد →</a>
+        </div>
+      </article>
+    {% endfor %}
+  </main>
 
-  <!-- ===== قسم عن المدونة ===== -->
-  <section id="about" class="about" style="background-image: url('assets/images/about-bg.jpg');">
-    <div class="container">
-      <h2>عن المدونة</h2>
-      <p>
-        هذه المدونة الثقافية الإعلامية جاءت لتكون منبرًا عربيًا يجمع بين الأصالة والمعاصرة،
-        ويعكس الفكر العربي الواعي الذي يسعى لبناء نهضة ثقافية متجددة، تعانق الحاضر وتستند إلى
-        القيم العربية والإسلامية الأصيلة.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== قسم المقالات ===== -->
-  <section id="articles" class="articles">
-    <div class="container">
-      <h2>أحدث المقالات</h2>
-      <div class="articles-grid">
-        <!-- المقال الأول -->
-        <article class="post-card">
-          <img src="assets/images/post-youtube-danger.jpg" alt="يوتيوب نافذة مفتوحة" />
-          <div class="post-content">
-            <h3><a href="posts/2025-10-01-youtube-danger.html">يوتيوب .. نافذة مفتوحة أمام عيون أطفالنا تسبب الرعب في قلوبهم وتدمر عقولهم</a></h3>
-            <p>بقلم: الكاتب والإعلامي طراد علي بن سرحان الرويس</p>
-            <p class="excerpt">
-إنّ الفيديوهات الموجودة على "اليوتيوب" لها تأثير على سلوك الأطفال وتكوين عاداتهم وقيمهم وتدخلهم في عزلة عن عائلاتهم ورفاقهم
-            </p>
-            <a href="posts/2025-10-01-youtube-danger.html" class="read-more">اقرأ المزيد</a>
-          </div>
-        </article>
-
-        <!-- المقال الثاني (نموذج لمقال ثقافي آخر) -->
-        <article class="post-card">
-          <img src="assets/images/post-internet-warning.jpg" alt="الانترنت .. حرب قيم" />
-          <div class="post-content">
-            <h3><a href="#">الإنترنت .. حرب قيم صامتة تُشن على أبنائنا .. هل أسقط الآباء "الدرع الأخير" لحماية الأسرة؟</a></h3>
-            <p>بقلم: د. طراد علي بن سرحان الرويس</p>
-            <p class="excerpt">
-أصبح الإنترنت سلاحاً ذو حدين، يحمل في طياته مخاطر جسيمة تهدد براءة أطفالنا وسلامتهم النفسية والأخلاقية
-            </p>
-            <a href="#" class="read-more">اقرأ المزيد</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== قسم التواصل ===== -->
-  <section id="contact" class="contact" style="background-image: url('assets/images/contact-bg.jpg');">
-    <div class="container">
-      <h2>تواصل معنا</h2>
-      <form>
-        <input type="text" placeholder="الاسم الكامل" required />
-        <input type="email" placeholder="البريد الإلكتروني" required />
-        <textarea placeholder="رسالتك" required></textarea>
-        <button type="submit" class="btn">إرسال</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ===== الفوتر ===== -->
-  <footer class="footer">
-    <p>© 2025 جميع الحقوق محفوظة - بإشراف الكاتب والإعلامي طراد علي بن سرحان الرويس</p>
+  <footer class="site-footer">
+    <p>© 2025 المدونة العربية للثقافة والإعلام | بإشراف د. طراد الرويس</p>
   </footer>
-
 </body>
 </html>
