@@ -3,141 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المقالات | المدونة العربية للثقافة والإعلام</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #f3f6fa;
-      color: #1c2a3a;
-    }
-
-    header {
-      background-color: #1c2a3a;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
-    nav {
-      background-color: #243447;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: #e8ecf1;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .article-card {
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      margin-bottom: 30px;
-      padding: 25px;
-      transition: transform 0.2s ease;
-    }
-
-    .article-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .article-card h2 {
-      color: #1c2a3a;
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-
-    .article-card p {
-      color: #333;
-      line-height: 1.8;
-    }
-
-    .read-more {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #1c2a3a;
-      color: white;
-      padding: 8px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .read-more:hover {
-      background-color: #2e4053;
-    }
-
-    footer {
-      background-color: #1c2a3a;
-      color: #dce3ec;
-      text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
-    }
-  </style>
+  <title>مقالات الكاتب طراد علي بن سرحان الرويس</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>المقالات</h1>
+  <!-- ====== الرأس العلوي ====== -->
+  <header class="main-header">
+    <h1 class="blog-title">المدونة العربية للثقافة والإعلام</h1>
+    <p class="blog-subtitle">بإشراف الكاتب والإعلامي طراد علي بن سرحان الرويس</p>
   </header>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="articles.html">المقالات</a>
-    <a href="about.html">من نحن</a>
-    <a href="contact.html">اتصل بنا</a>
+  <!-- ====== شريط التنقل ====== -->
+  <nav class="hero" style="text-align:center; border-bottom:none; background-color:#f8f3e8;">
+    <a href="index.html" class="read-more">الرئيسية</a>
+    <a href="articles.html" class="read-more" style="background-color:#8e6c1c;">المقالات</a>
+    <a href="about.html" class="read-more">عن الكاتب</a>
+    <a href="contact.html" class="read-more">اتصل بنا</a>
   </nav>
 
-  <div class="container">
-    <div class="article-card">
-      <h2>يوتيوب .. نافذة مفتوحة أمام عيون أطفالنا تسبب الرعب في قلوبهم وتدمر عقولهم</h2>
-      <p>مقال اجتماعي يتناول دور أولياء الأمور على أن يكونوا على دراية كاملة بالمخاطر التي قد يتعرض لها أطفالهم أثناء استخدام الإنترنت.</p>
-      <a href="_posts/2025-09-26-youtube-kids.html" class="read-more">اقرأ المزيد</a>
-    </div>
+  <!-- ====== القسم الرئيسي للمقالات ====== -->
+  <section class="container">
+    <h2 style="text-align:center; color:#b38b2e; margin-top:2rem;">📰 مقالات الكاتب والإعلامي طراد علي بن سرحان الرويس</h2>
+    <p style="text-align:center; max-width:750px; margin:1rem auto 2rem; color:#444; line-height:1.9;">
+      يضم هذا القسم نخبة من المقالات الفكرية والإعلامية التي نشرها الكاتب في عدد من الصحف والمجلات العربية، 
+      تناولت قضايا الأمة، والإعلام، والوحدة العربية، وتعزيز الهوية الوطنية.
+    </p>
 
-    <div class="article-card">
-      <h2>الإنترنت .. حرب قيم صامتة تُشن على أبنائنا .. هل أسقط الآباء "الدرع الأخير" لحماية الأسرة؟</h2>
-      <p>رؤية تحليلية تشرح مخاطر الإنترنت المفتوح على الأسرة العربية وأهمية الحماية الرقمية الواعية للأطفال.</p>
-      <a href="_posts/2025-10-02-internet-values-war.html" class="read-more">اقرأ المزيد</a>
-    </div>
+    <div class="posts">
 
-    <div class="article-card">
-      <h2>الاسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</h2>
-      <p>رؤية تحليلية تتطلــب القيــام بأدوار تربــوية فعــالة تعمل جميعها على تنشــئة أجيــال تمتلــك قيــم ومبــادئ وقــدرات ومهــارات تســهم فــي إدراكهــا ووعيهــا والاستجابة لهــا بمــا يحقـق الالتزام بثوابـت ديننا الاسلامي ومبادئه.</p>
-      <a href="_posts/2025-10-05-arab-family-article.html" class="read-more">اقرأ المزيد</a>
-    </div>
+      <!-- المقال 1 -->
+      <div class="post-card">
+        <img src="images/article1.jpg" alt="تعزيز وحدتنا" class="post-image">
+        <div class="post-content">
+          <h3>طراد الرويس يسلّط الضوء على جذور تاريخية راسخة ليوم التأسيس السعودي</h3>
+          <p>مقال وطني تحليلي يبرز عمق التاريخ السعودي وأهمية ترسيخ الهوية الوطنية في الوعي الجمعي.</p>
+          <a href="https://mustaqbl.net/%D8%B7%D8%B1%D8%A7%D8%AF-%D8%A7%D9%84%D8%B1%D9%88%D9%8A%D8%B3-%D9%8A%D8%B3%D9%84%D8%B7-%D8%A7%D9%84%D8%B6%D9%88%D8%A1-%D8%B9%D9%84%D9%8A-%D8%AC%D8%B0%D9%88%D8%B1-%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE/" 
+             class="read-more" target="_blank">اقرأ في الصحيفة الأصلية</a>
+        </div>
+      </div>
 
-    <div class="article-card">
-      <h2>تعزيز وحدتنا .. لتحقيق نهضتنا العربية</h2>
-      <p>دعوة فكرية صادقة لتعزيز الوحدة العربية وبناء نهضة قائمة على قيم الأصالة والتعاون والتجديد.</p>
-      <a href="_posts/2025-10-07-arab-unity.html" class="read-more">اقرأ المزيد</a>
-    </div>
-  </div>
+      <!-- المقال 2 -->
+      <div class="post-card">
+        <img src="images/article2.jpg" alt="التكامل الاقتصادي العربي" class="post-image">
+        <div class="post-content">
+          <h3>ضرورة التكامل الاقتصادي في الوطن العربي نحو تحقيق الوحدة العربية</h3>
+          <p>مقال تحليلي يؤكد أهمية التعاون الاقتصادي العربي كخطوة عملية نحو وحدة الأمة ونهضتها المستقبلية.</p>
+          <a href="https://media-critic-magazine.com/2025/06/18/%D8%B6%D8%B1%D9%88%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D9%83%D8%A7%D9%85%D9%84-%D8%A7%D9%84%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%88%D8%B7%D9%86-%D8%A7%D9%84%D8%B9/"
+             class="read-more" target="_blank">اقرأ في الصحيفة الأصلية</a>
+        </div>
+      </div>
 
-  <footer>
-    منصة ثقافية بإشراف الكاتب والإعلامي طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.
+      <!-- المقال 3 -->
+      <div class="post-card">
+        <img src="images/article3.jpg" alt="كوب 16" class="post-image">
+        <div class="post-content">
+          <h3>طراد الرويس يشيد بإنجاز المياه الوطنية لزراعة 5.2 ملايين شجرة في مؤتمر “كوب 16”</h3>
+          <p>مقال يُبرز الجهود البيئية السعودية في تحقيق التنمية المستدامة والحفاظ على التوازن المناخي.</p>
+          <a href="https://mustaqbl.net/%D8%B7%D8%B1%D8%A7%D8%AF-%D8%A7%D9%84%D8%B1%D9%88%D9%8A%D8%B3-%D9%8A%D8%B4%D9%8A%D8%AF-%D8%A8%D8%A7%D9%86%D8%AC%D8%A7%D8%B2-%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A/"
+             class="read-more" target="_blank">اقرأ في الصحيفة الأصلية</a>
+        </div>
+      </div>
+
+      <!-- المقال 4 -->
+      <div class="post-card">
+        <img src="images/article4.jpg" alt="الوحدة والتضامن العربي" class="post-image">
+        <div class="post-content">
+          <h3>الوحدة والتضامن العربي</h3>
+          <p>مقال يعالج أهمية الوحدة والتعاون العربي في مواجهة التحديات وتحقيق التوازن الإقليمي المنشود.</p>
+          <a href="https://algomhuriagate.com/%D8%A7%D9%84%D9%88%D8%AD%D8%AF%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B6%D8%A7%D9%85%D9%86-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A/"
+             class="read-more" target="_blank">اقرأ في الصحيفة الأصلية</a>
+        </div>
+      </div>
+
+      <!-- المقال 5 -->
+      <div class="post-card">
+        <img src="images/article5.jpg" alt="صوت الإصلاح والتنمية" class="post-image">
+        <div class="post-content">
+          <h3>قلم ينير الطريق.. طراد الرويس صوت الإصلاح والتنمية في فضاء الإعلام العربي</h3>
+          <p>تقرير إعلامي يستعرض مسيرة الكاتب ودوره البارز في تعزيز قيم الإصلاح والتنمية عبر الإعلام العربي.</p>
+          <a href="https://www.alhram-elmasry-news.net/2025/10/blog-post_128.html"
+             class="read-more" target="_blank">اقرأ في الصحيفة الأصلية</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== التذييل ====== -->
+  <footer class="footer">
+    جميع الحقوق محفوظة © 2025 | الكاتب والإعلامي طراد علي بن سرحان الرويس
   </footer>
 
 </body>
