@@ -3,140 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>عن الكاتب | طراد علي بن سرحان الرويس</title>
+  <title>عن الكاتب والإعلامي | طراد علي بن سرحان الرويس</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
     body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      line-height: 1.8;
       margin: 0;
-      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f3f6fa;  /* كما في الموقع */
+      color: #1c2a3a;               /* نفس لون النص في الموقع */
+      line-height: 1.8;
     }
+
     header {
+      background-color: #1c2a3a;  /* نفس رأس الموقع */
+      color: white;
       text-align: center;
-      padding: 50px 20px 20px;
-      background: linear-gradient(180deg, #1a1a1a, #000);
-      border-bottom: 3px solid #d4af37;
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-    header img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 4px solid #d4af37;
-      box-shadow: 0 0 25px #d4af37;
-      object-fit: cover;
-    }
+
     header h1 {
-      margin-top: 20px;
-      font-size: 28px;
-      color: #d4af37;
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
     }
-    header h2 {
-      font-size: 20px;
-      color: #ccc;
-      margin-top: 5px;
+
+    nav {
+      background-color: #243447;  /* نفس لون شريط التنقل في موقعك */
+      text-align: center;
+      padding: 10px 0;
     }
-    main {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #1b1b1b;
-      border-radius: 16px;
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+
+    nav a {
+      color: #e8ecf1;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
     }
-    main h3 {
-      color: #d4af37;
-      border-right: 4px solid #d4af37;
-      padding-right: 10px;
+
+    nav a:hover {
+      color: #ffd700;  /* ذهبي عند المرور */
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+      padding: 50px 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(to right, #ffd700, #c89b2c);
+    }
+
+    .author-photo {
+      display: block;
+      margin: 0 auto 25px;
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      border: 5px solid #ffd700;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .author-photo:hover {
+      transform: scale(1.03);
+    }
+
+    h2 {
+      text-align: center;
+      background: linear-gradient(to left, #c89b2c, #ffd700, #c89b2c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.9em;
       margin-bottom: 15px;
     }
-    .bio p {
+
+    h3 {
+      color: #1c2a3a;
+      border-right: 4px solid #ffd700;
+      padding-right: 10px;
+      margin-top: 45px;
+      font-size: 1.3em;
+    }
+
+    p {
+      font-size: 1.1em;
       text-align: justify;
-      font-size: 18px;
+      margin-bottom: 15px;
+      color: #1c2a3a;
     }
-    .articles {
-      margin-top: 40px;
-    }
+
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
+      margin-top: 30px;
     }
+
     .article-card {
-      background-color: #111;
-      border: 1px solid #333;
+      background-color: #ffffff;
+      border: 1px solid #e1e5ea;
       border-radius: 12px;
       padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .article-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 5px 25px rgba(28, 42, 58, 0.15);
     }
+
     .article-card h4 {
-      color: #d4af37;
+      color: #1c2a3a;
       margin-bottom: 10px;
+      border-right: 3px solid #ffd700;
+      padding-right: 8px;
+      font-size: 1.1em;
     }
+
     .article-card p {
-      color: #ddd;
-      font-size: 15px;
+      color: #555;
+      font-size: 0.95em;
     }
+
     footer {
+      background-color: #1c2a3a;
+      color: #dce3ec;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #aaa;
-      border-top: 1px solid #333;
+      padding: 20px 10px;
+      font-size: 1em;
       margin-top: 60px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="/assets/images/trad-alrowes.jpg" alt="الكاتب طراد علي بن سرحان الرويس">
-    <h1>الكاتب والإعلامي طراد علي بن سرحان الرويس</h1>
-    <h2>صوت إعلامي سعودي بارز في القضايا الاجتماعية والتربوية</h2>
+    <h1>المدونة العربية للثقافة والإعلام</h1>
   </header>
 
-  <main>
-    <section class="bio">
-      <h3>عن الكاتب</h3>
-      <p>
-        طراد الرويس هو أحد أبرز الكتّاب والإعلاميين الذين أثروا الساحة الإعلامية بكتاباتهم وتحليلاتهم. يتميز بأسلوبه الفردي وقدرته على نقل الأفكار بوضوح وإيجاز، مما يجعله صوتاً مؤثراً في الحوارات الثقافية والاجتماعية. منذ بداية مسيرته، ساهم الرويس في تقديم رؤى جديدة للتحديات التي تواجه المجتمع، مستخدماً قلمه كأداة للتأثير والتغيير تجمع بين التخصص الأكاديمي والخبرة العملية، مما يجعله مرجعاً في مجاله.
-      </p>
-      <p>
-        ركّز في مقالاته على قضايا الأسرة والنشء، وكتب حول التنشئة الاجتماعية، وتمكين المرأة، وأثر التكنولوجيا الحديثة على الأطفال والشباب. كما عُرف بمواقفه الوطنية والإنسانية، حيث حملت مقالاته رسائل إصلاحية وتوعوية تعبّر عن التزامه العميق تجاه مجتمعه. أعماله تسعى لتنـوير الفكر وتعميق الفهم، مؤكدًا أهمية الإعلام كوسيلة لصناعة الوعي وبناء المستقبل.
-      </p>
-    </section>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="articles.html">المقالات</a>
+    <a href="about.html">عن الكاتب</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
 
-    <section class="articles">
-      <h3>آخر المقالات</h3>
-      <div class="articles-grid">
-        <div class="article-card">
-          <h4>لأجلك يا فلسطين .. سنعيش صقوراً طائرين</h4>
-          <p>مقال وطني مؤثر يعبّر عن الانتماء والكرامة العربية.</p>
-        </div>
-        <div class="article-card">
-          <h4>التفكك الأسري يهدد حياة الأبناء</h4>
-          <p>رؤية تربوية حول أهمية الأسرة في استقرار المجتمع.</p>
-        </div>
-        <div class="article-card">
-          <h4>حماية خصوصية الأطفال في العالم الرقمي</h4>
-          <p>تحليل إعلامي يسلط الضوء على مخاطر التقنية على النشء.</p>
-        </div>
-        <div class="article-card">
-          <h4>المرأة السعودية تمثل نموذجاً للقوة والإرادة</h4>
-          <p>مقال يكرّس رؤية تمكينية للمرأة السعودية المعاصرة.</p>
-        </div>
+  <section class="about-container">
+    <img src="assets/images/trad-alrowes.jpg" alt="الكاتب والإعلامي طراد علي بن سرحان الرويس" class="author-photo">
+
+    <h2>الكاتب والإعلامي طراد علي بن سرحان الرويس</h2>
+    <p>
+      الكاتب والإعلامي طراد الرويس هو أحد أبرز الأصوات الإعلامية في المشهد الثقافي والاجتماعي العربي، 
+      يتميز بأسلوبه الراقي وتحليلاته العميقة في تناول القضايا التربوية والمجتمعية، 
+      جامعًا بين الحس الإنساني والرؤية الأكاديمية.
+    </p>
+    <p>
+      من خلال مقالاته وبرامجه الإعلامية، يسعى الرويس إلى تعزيز القيم الوطنية، 
+      وترسيخ مفاهيم الوعي الثقافي، وتسليط الضوء على التحديات التي تواجه الشباب والأسرة والمجتمع. 
+      إيمانه العميق بدور الإعلام في بناء الإنسان جعله نموذجًا في الطرح المسؤول والرسالة الهادفة.
+    </p>
+
+    <h3>آخر المقالات</h3>
+    <div class="articles-grid">
+      <div class="article-card">
+        <h4>لأجلك يا فلسطين .. سنعيش صقوراً طائرين</h4>
+        <p>مقال وطني مؤثر يعبّر عن الانتماء والكرامة العربية.</p>
       </div>
-    </section>
-  </main>
+      <div class="article-card">
+        <h4>التفكك الأسري يهدد حياة الأبناء</h4>
+        <p>رؤية تربوية حول أهمية الأسرة في استقرار المجتمع.</p>
+      </div>
+      <div class="article-card">
+        <h4>حماية خصوصية الأطفال في العالم الرقمي</h4>
+        <p>تحليل إعلامي يسلط الضوء على مخاطر التقنية على النشء.</p>
+      </div>
+      <div class="article-card">
+        <h4>المرأة السعودية تمثل نموذجاً للقوة والإرادة</h4>
+        <p>مقال يكرّس رؤية تمكينية للمرأة السعودية المعاصرة.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    جميع الحقوق محفوظة © 2025 الكاتب والإعلامي طراد علي بن سرحان الرويس
+    منصة ثقافية بإشراف الكاتب والإعلامي طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.
   </footer>
-
 </body>
 </html>
