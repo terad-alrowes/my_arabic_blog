@@ -206,3 +206,52 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
 }
+
+/* ========== قسم العنوان الرئيسي (Hero Section) ========== */
+.hero-section {
+  position: relative;
+  background-image: url("3e8547a1-193c-4ada-a5f4-8f78bb7c92c0.png"); /* ضع اسم الصورة كما رفعتها داخل مجلد الصور */
+  background-size: cover;
+  background-position: center;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  color: #f7d774;
+  margin-bottom: 0.8rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #fffbe9;
+}
+
+/* لجعلها متجاوبة مع الجوال */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 280px;
+    padding: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
