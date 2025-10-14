@@ -102,5 +102,18 @@
   <footer>
     منصة ثقافية بإشراف الكاتب والإعلامي طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.
   </footer>
+  <!-- تشغيل صوت الريشة عند التحميل -->
+<audio id="featherSound" src="feather-write.mp3" preload="auto"></audio>
+
+<script>
+  window.addEventListener("load", function () {
+    const sound = document.getElementById("featherSound");
+    // التشغيل لمرة واحدة فقط بعد تحميل الصفحة
+    setTimeout(() => {
+      sound.volume = 0.25; // خفيف جدًا
+      sound.play().catch(() => {});
+    }, 800);
+  });
+</script>
 </body>
 </html>
