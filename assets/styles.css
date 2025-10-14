@@ -1,5 +1,15 @@
 /* ========== القواعد العامة ========== */
 body {
+  opacity: 0;
+  animation: fadePageIn 1.2s ease-in forwards;
+}
+
+@keyframes fadePageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
   font-family: "Cairo", "Amiri", sans-serif;
   background-color: #faf7f1;
   color: #222;
