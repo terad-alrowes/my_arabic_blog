@@ -459,78 +459,64 @@ body {
   to { opacity: 1; }
 }
 
-/* ========== الريشة الذهبية بخطان ضوئيان متلاشيان ========== */
-.hero-icon {
+/* ========== حركة الريشة على مسار النص ========== */
+.title-container {
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(135deg, #f7d774, #c7a435);
-  clip-path: polygon(0% 0%, 100% 40%, 50% 100%, 0% 60%);
-  transform-origin: center;
-  animation: floatFeather 4s ease-in-out infinite;
-  margin-left: 10px;
-  filter: drop-shadow(0 0 6px rgba(255, 217, 128, 0.8));
+  text-align: center;
 }
 
-/* الذرات والخطان الذهبيان */
-.hero-icon::before,
-.hero-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 50px;
-  height: 2px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, rgba(255, 232, 120, 0.9), transparent);
-  opacity: 0;
-  transform: scaleX(0.5);
-  animation: goldenTrail 2.5s ease-in-out infinite;
-}
-
-.hero-icon::after {
-  top: 56%;
-  height: 1px;
-  animation-delay: 0.6s;
-  background: linear-gradient(90deg, rgba(255, 243, 160, 0.8), transparent);
-}
-
-/* حركة الريشة */
-@keyframes floatFeather {
-  0%, 100% { transform: translateY(0) rotate(-4deg); }
-  50% { transform: translateY(-8px) rotate(5deg); }
-}
-
-/* الخطان الضوئيان المتلاشيان */
-@keyframes goldenTrail {
-  0% {
-    opacity: 0;
-    transform: translateX(0) scaleX(0.3);
-  }
-  40% {
-    opacity: 1;
-    transform: translateX(10px) scaleX(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(25px) scaleX(0.3);
-  }
-}
-
-/* ========== النص الذهبي اللامع ========== */
 .hero-title {
   font-size: 2.4rem;
-  background: linear-gradient(90deg, #b38b2e, #f8e38a, #b38b2e);
+  background: linear-gradient(90deg, #b38b2e, #f7d774, #b38b2e);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: goldenShine 3s ease-in-out both;
+  animation: goldenShine 4s ease-in-out both;
   margin-bottom: 0.8rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
 }
 
-/* الوميض الذهبي للنص */
+/* حركة كتابة العنوان */
+.hero-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background: #faf7f1;
+  animation: revealText 5s steps(40, end) forwards;
+}
+
+@keyframes revealText {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+/* الريشة المتحركة */
+.moving-feather {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  font-size: 1.9rem;
+  color: #f7d774;
+  filter: drop-shadow(0 0 6px rgba(255, 217, 128, 0.8));
+  animation: moveFeather 5s linear forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes moveFeather {
+  0% { right: 0; transform: rotate(-10deg); opacity: 0; }
+  10% { opacity: 1; }
+  50% { transform: translateY(-6px) rotate(10deg); }
+  100% { right: 100%; opacity: 0; }
+}
+
+/* وميض ذهبي للنص */
 @keyframes goldenShine {
   0% {
     background-position: -200%;
@@ -546,21 +532,16 @@ body {
   }
 }
 
-/* ========== النص الفرعي والتدرج في الظهور ========== */
+/* النص الفرعي */
 .hero-subtitle {
   font-size: 1.2rem;
   color: #fffbe9;
   opacity: 0;
   animation: fadeInUp 2.5s ease-out forwards;
-  animation-delay: 1.2s;
+  animation-delay: 2.2s;
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ========== تأثير دخول الصفحة ========== */
+/* دخول الصفحة */
 body {
   opacity: 0;
   animation: fadePageIn 1.2s ease-in forwards;
