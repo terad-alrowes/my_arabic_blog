@@ -1,115 +1,111 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المدونة العربية للثقافة والإعلام</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background-color: #f3f6fa;
-      color: #1c2a3a;
-    }
-
-    header {
-      background-color: #1c2a3a;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      letter-spacing: 1px;
-    }
-
-   <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="container">
-    <h1 class="logo"><a href="index.html">المدونة العربية</a></h1>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">الرئيسية</a></li>
-      <li><a href="articles.html">المقالات</a></li>
-      <li><a href="about.html">عن المدونة</a></li>
-      <li><a href="contact.html">تواصل معنا</a></li>
-    </ul>
-  </div>
-</nav>
-
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #1c2a3a, #2e4053);
-      color: white;
-    }
-
-    .hero h2 {
-      font-size: 2em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      color: #dce3ec;
-    }
-
-    footer {
-      background-color: #1c2a3a;
-      color: #dce3ec;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 1em;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
+<meta name="keywords" content="ثقافة عربية, مدونة عربية, مقالات ثقافية, فنون, أدب, أخبار عربية">
+<meta name="author" content="د. طراد الرويس">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="مدونة الثقافة العربية">
+<meta property="og:description" content="استمتع بالمحتوى العربي الثقافي والفني المميز.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://terad-alrowes.github.io/my-arabic-blog/">
+<meta property="og:image" content="https://terad-alrowes.github.io/my-arabic-blog/preview-image.jpg">
+<title>مدونة إعلامية ثقافية</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="main-header">
-  <div class="hero-section">
-    <div class="overlay">
-      <div class="title-container">
-        <h1 class="hero-title" id="heroTitle">
-          المدونة العربية للثقافة والإعلام
-        </h1>
-        <div class="moving-feather" id="movingFeather">🪶</div>
-      </div>
-      <p class="hero-subtitle">
-        بإشراف الكاتب والإعلامي طراد علي بن سرحان الرويس
-      </p>
-    </div>
-  </div>
+<header>
+  <div class="logo"><h1>مدونة الثقافة العربية</h1></div>
+  <nav>
+    <ul>
+      <li><a href="#home">الصفحة الرئيسية</a></li>
+      <li><a href="#articles">مقالات</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+  </nav>
 </header>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="articles.html">المقالات</a>
-    <a href="about.html">من نحن</a>
-    <a href="contact.html">اتصل بنا</a>
-  </nav>
+<section id="home" class="hero reveal">
+  <h2>أهلاً بكم في مدونتنا الثقافية</h2>
+  <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
+</section>
 
-  <section class="hero">
-    <h2>مرحباً بكم</h2>
-    <p>في المدونة العربية للثقافة والإعلام</p>
-  </section>
+<section id="articles" class="reveal-left delay-1">
+  <h2>أحدث المقالات</h2>
 
-  <footer>
-    منصة ثقافية بإشراف الكاتب والإعلامي طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.
-  </footer>
-  <!-- تشغيل صوت الريشة عند التحميل -->
-<audio id="featherSound" src="feather-write.mp3" preload="auto"></audio>
+  <div class="article reveal delay-1">
+    <h3>عنوان المقال الأول</h3>
+    <img src="images/article1.jpg" alt="الأدب العربي وفنونه" style="width:100%; border-radius:10px; margin:10px 0;">
+    <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
+    <a href="#">اقرأ المزيد...</a>
+    <div class="social-share">
+      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    </div>
+  </div>
 
-<script>
-  window.addEventListener("load", function () {
-    const sound = document.getElementById("featherSound");
-    // التشغيل لمرة واحدة فقط بعد تحميل الصفحة
-    setTimeout(() => {
-      sound.volume = 0.25; // خفيف جدًا
-      sound.play().catch(() => {});
-    }, 800);
-  });
-</script>
+  <div class="article reveal delay-2">
+    <h3>عنوان المقال الثاني</h3>
+    <img src="images/article2.jpg" alt="تاريخ الثقافة العربية" style="width:100%; border-radius:10px; margin:10px 0;">
+    <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
+    <a href="#">اقرأ المزيد...</a>
+    <div class="social-share">
+      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    </div>
+  </div>
+
+  <div class="article reveal delay-3">
+    <h3>عنوان المقال الثالث</h3>
+    <img src="images/article3.jpg" alt="الفنون والموسيقى العربية" style="width:100%; border-radius:10px; margin:10px 0;">
+    <p>محتوى المقال الثالث عن الفنون والموسيقى العربية.</p>
+    <a href="#">اقرأ المزيد...</a>
+    <div class="social-share">
+      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    </div>
+  </div>
+
+  <div class="article reveal delay-4">
+    <h3>عنوان المقال الرابع</h3>
+    <img src="images/article3.jpg" alt="طراد الرويس وموانجازاته" style="width:100%; border-radius:10px; margin:10px 0;">
+    <p>محتوى المقال الرابع عن طراد الرويس وانجازاته.</p>
+    <a href="#">اقرأ المزيد...</a>
+    <div class="social-share">
+      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    </div>
+  </div>
+  
+</section>
+
+<section id="about" class="reveal-right delay-2">
+  <h2>من نحن</h2>
+  <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
+</section>
+
+<section id="contact" class="reveal-left delay-3">
+  <h2>اتصل بنا</h2>
+  <form id="contactForm" class="reveal delay-4" action="https://formspree.io/f/yourFormID" method="POST" novalidate>
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" required />
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="_replyto" required />
+    <label for="message">الرسالة:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<footer class="reveal">
+  <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
+  <div class="social-footer">
+    <a href="#">فيسبوك</a> | <a href="#">تويتر</a> | <a href="#">إنستغرام</a>
+  </div>
+</footer>
 </body>
 </html>
+
