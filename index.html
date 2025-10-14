@@ -1,152 +1,151 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="مدونة إعلامية ثقافية عربية تقدم مقالات وأخبار ثقافية وفنية وأدبية.">
-<meta name="keywords" content="ثقافة عربية, مدونة عربية, مقالات ثقافية, فنون, أدب, أخبار عربية">
-<meta name="author" content="د. طراد الرويس">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="مدونة الثقافة العربية">
-<meta property="og:description" content="استمتع بالمحتوى العربي الثقافي والفني المميز.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://terad-alrowes.github.io/my-arabic-blog/">
-<meta property="og:image" content="https://terad-alrowes.github.io/my-arabic-blog/preview-image.jpg">
-<title>مدونة إعلامية ثقافية</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المدونة العربية للثقافة والإعلام</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    /* --- القسم العلوي (Hero) --- */
+    header {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                  url('assets/hero-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+    header a {
+      background-color: #d4af37;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    header a:hover {
+      background-color: #c29b2e;
+    }
+
+    /* --- قسم المقالات --- */
+    section.posts {
+      padding: 70px 8%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    .post-card {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .post-card:hover {
+      transform: translateY(-6px);
+    }
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 20px;
+    }
+    .post-content h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #222;
+    }
+    .post-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+      margin: 12px 0 20px;
+    }
+    .post-content a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* --- الفوتر --- */
+    footer {
+      background-color: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
-  <div id="footer-placeholder"></div>
-
-<script>
-  // تحميل تذييل الصفحة بشكل تلقائي
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-</script>
-
 <body>
-  <div id="navbar-placeholder"></div>
 
-<script>
-  // تحميل محتوى ملف navbar.html داخل كل صفحة
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
+  <header>
+    <h1>المدونة العربية للثقافة والإعلام</h1>
+    <p>فكر عربي .. وهوية أصيلة .. ورسالة إعلامية بنّاءة</p>
+    <a href="#posts">تصفح المقالات</a>
+  </header>
 
-      // تحديد الرابط النشط تلقائيًا حسب الصفحة الحالية
-      const currentPage = location.pathname.split("/").pop();
-      document.querySelectorAll(".nav-links a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        }
-      });
-    });
-</script>
-
-  <div id="navbar"></div>
-
-<script>
-  fetch("includes/navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
-
-<header>
-  <div class="logo"><h1>مدونة الثقافة العربية</h1></div>
-  <nav>
-    <ul>
-      <li><a href="#home">الصفحة الرئيسية</a></li>
-      <li><a href="#articles">مقالات</a></li>
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#contact">اتصل بنا</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section id="home" class="hero reveal">
-  <h2>أهلاً بكم في مدونتنا الثقافية</h2>
-  <p>استمتعوا بالمحتوى العربي الثقافي المميز.</p>
-</section>
-
-<section id="articles" class="reveal-left delay-1">
-  <h2>أحدث المقالات</h2>
-
-  <div class="article reveal delay-1">
-    <h3>عنوان المقال الأول</h3>
-    <img src="images/article1.jpg" alt="الأدب العربي وفنونه" style="width:100%; border-radius:10px; margin:10px 0;">
-    <p>محتوى المقال الأول حول الأدب العربي وفنونه.</p>
-    <a href="#">اقرأ المزيد...</a>
-    <div class="social-share">
-      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+  <section id="posts" class="posts">
+    <div class="post-card">
+      <img src="assets/family-article.jpg" alt="الأسرة العربية">
+      <div class="post-content">
+        <h3>الأسرة العربية .. وتعظيم دورها في عصر تتسارع فيه التغيرات</h3>
+        <p>بقلم: الكاتب والإعلامي طراد علي بن سرحان الرويس<br>مقال تربوي يعمّق فهمنا لدور الأسرة في بناء المجتمع العربي الحديث.</p>
+        <a href="_posts/2025-10-08-family-article.md">اقرأ المزيد</a>
+      </div>
     </div>
-  </div>
 
-  <div class="article reveal delay-2">
-    <h3>عنوان المقال الثاني</h3>
-    <img src="images/article2.jpg" alt="تاريخ الثقافة العربية" style="width:100%; border-radius:10px; margin:10px 0;">
-    <p>محتوى المقال الثاني عن تاريخ الثقافة العربية.</p>
-    <a href="#">اقرأ المزيد...</a>
-    <div class="social-share">
-      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    <div class="post-card">
+      <img src="assets/youtube-children.jpg" alt="يوتيوب والأطفال">
+      <div class="post-content">
+        <h3>"يوتيوب" نافذة مفتوحة أمام عيون أطفالنا</h3>
+        <p>بقلم: د. طراد علي بن سرحان الرويس<br>تحقيق صحفي يناقش المخاطر النفسية والثقافية التي تواجه الأطفال في عالم اليوتيوب.</p>
+        <a href="_posts/2025-10-05-youtube-article.md">اقرأ المزيد</a>
+      </div>
     </div>
-  </div>
 
-  <div class="article reveal delay-3">
-    <h3>عنوان المقال الثالث</h3>
-    <img src="images/article3.jpg" alt="الفنون والموسيقى العربية" style="width:100%; border-radius:10px; margin:10px 0;">
-    <p>محتوى المقال الثالث عن الفنون والموسيقى العربية.</p>
-    <a href="#">اقرأ المزيد...</a>
-    <div class="social-share">
-      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    <div class="post-card">
+      <img src="assets/internet-war.jpg" alt="الإنترنت حرب القيم">
+      <div class="post-content">
+        <h3>"الإنترنت" .. حرب قيم صامتة تُشن على أبنائنا</h3>
+        <p>بقلم: الكاتب والإعلامي طراد علي بن سرحان الرويس<br>قراءة عميقة في الحرب الرقمية وتأثيرها على الأسرة العربية وهويتها.</p>
+        <a href="_posts/2025-10-07-internet-article.md">اقرأ المزيد</a>
+      </div>
     </div>
-  </div>
 
-  <div class="article reveal delay-4">
-    <h3>عنوان المقال الرابع</h3>
-    <img src="images/article3.jpg" alt="طراد الرويس وموانجازاته" style="width:100%; border-radius:10px; margin:10px 0;">
-    <p>محتوى المقال الرابع عن طراد الرويس وانجازاته.</p>
-    <a href="#">اقرأ المزيد...</a>
-    <div class="social-share">
-      <a href="https://twitter.com/intent/tweet?text=عنوان المقال&url=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">تويتر</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://terad-alrowes.github.io/my-arabic-blog/" target="_blank">فيسبوك</a>
+    <div class="post-card">
+      <img src="assets/unity-arab.jpg" alt="تعزيز وحدتنا">
+      <div class="post-content">
+        <h3>تعزيز وحدتنا .. لتحقيق نهضتنا العربية</h3>
+        <p>بقلم: طراد علي بن سرحان الرويس<br>رؤية فكرية تدعو لتجديد الوعي العربي وتعزيز التضامن لبناء نهضة شاملة.</p>
+        <a href="_posts/2025-10-09-unity-article.md">اقرأ المزيد</a>
+      </div>
     </div>
-  </div>
-  
-</section>
+  </section>
 
-<section id="about" class="reveal-right delay-2">
-  <h2>من نحن</h2>
-  <p>نحن مدونة تهدف إلى نشر المعرفة الثقافية والفنية عبر مقالات ومراجعات تفصيلية حول الثقافة العربية.</p>
-</section>
+  <footer>
+    © 2025 المدونة العربية للثقافة والإعلام – جميع الحقوق محفوظة
+  </footer>
 
-<section id="contact" class="reveal-left delay-3">
-  <h2>اتصل بنا</h2>
-  <form id="contactForm" class="reveal delay-4" action="https://formspree.io/f/yourFormID" method="POST" novalidate>
-    <label for="name">الاسم:</label>
-    <input type="text" id="name" name="name" required />
-    <label for="email">البريد الإلكتروني:</label>
-    <input type="email" id="email" name="_replyto" required />
-    <label for="message">الرسالة:</label>
-    <textarea id="message" name="message" required></textarea>
-    <button type="submit">إرسال</button>
-  </form>
-</section>
-
-<footer class="reveal">
-  <p>&copy; 2025 مدونة الثقافة العربية. جميع الحقوق محفوظة.</p>
-  <div class="social-footer">
-    <a href="#">فيسبوك</a> | <a href="#">تويتر</a> | <a href="#">إنستغرام</a>
-  </div>
-</footer>
 </body>
 </html>
-
