@@ -611,3 +611,44 @@ body {
   color: #f0c040;
   border-bottom: 2px solid #f0c040;
 }
+
+/* Footer */
+.footer {
+  background-color: #111a2b; /* أزرق غامق أنيق */
+  color: #ddd;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: 1px solid #2b3a5a;
+}
+
+.footer .container {
+  width: 90%;
+  margin: auto;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #f0c040;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
