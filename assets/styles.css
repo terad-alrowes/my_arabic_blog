@@ -255,3 +255,22 @@ body {
     font-size: 1rem;
   }
 }
+
+/* ========== تأثير التحريك للعنوان الرئيسي ========== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+  animation: fadeInUp 1.8s ease-out both;
+}
