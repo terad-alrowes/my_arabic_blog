@@ -458,3 +458,90 @@ body {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* ========== الريشة الذهبية المتحركة مع أثر ضوئي ========== */
+.hero-icon {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #f7d774, #c7a435);
+  clip-path: polygon(0% 0%, 100% 40%, 50% 100%, 0% 60%);
+  transform-origin: center;
+  animation: floatFeather 4s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+/* ذرات الضوء المتلاشي */
+.hero-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f7e48b 0%, transparent 70%);
+  opacity: 0;
+  animation: goldenTrail 2s ease-in-out infinite;
+}
+
+/* حركة الريشة */
+@keyframes floatFeather {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+/* الأثر الذهبي المتلاشي */
+@keyframes goldenTrail {
+  0% { opacity: 0; transform: translateX(0) scale(0.5); }
+  50% { opacity: 1; transform: translateX(10px) scale(1.2); }
+  100% { opacity: 0; transform: translateX(20px) scale(0.5); }
+}
+
+/* ========== تأثير الوميض الذهبي للنص ========== */
+@keyframes goldenShine {
+  0% {
+    background-position: -200%;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.hero-title {
+  font-size: 2.4rem;
+  background: linear-gradient(90deg, #c7a435, #f7d774, #c7a435);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldenShine 3s ease-in-out both;
+  margin-bottom: 0.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* النص الفرعي */
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #fffbe9;
+  opacity: 0;
+  animation: fadeInUp 2.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+/* دخول الصفحة */
+body {
+  opacity: 0;
+  animation: fadePageIn 1.2s ease-in forwards;
+}
+
+@keyframes fadePageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
