@@ -28,6 +28,24 @@
   </style>
 </head>
 <body>
+<div id="navbar-placeholder"></div>
+
+<script>
+  // تحميل محتوى ملف navbar.html داخل كل صفحة
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+
+      // تحديد الرابط النشط تلقائيًا حسب الصفحة الحالية
+      const currentPage = location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
 
   <!-- ====== الرأس العلوي ====== -->
   <header class="main-header">
