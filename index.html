@@ -240,6 +240,17 @@ layout: default
     </div>
   </section>
 
+<audio id="featherSound" src="feather-golden.mp3" preload="auto"></audio>
+<script>
+window.addEventListener("load", function () {
+  const sound = document.getElementById("featherSound");
+  setTimeout(() => {
+    sound.volume = 0.2;
+    sound.play().catch(() => {});
+  }, 800);
+});
+</script>
+  
   <footer>
     <p>© {{ site.time | date: "%Y" }} جميع الحقوق محفوظة - المدونة العربية للثقافة والإعلام</p>
   </footer>
