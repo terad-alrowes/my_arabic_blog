@@ -1,364 +1,120 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="images/شعار%20المدونة%203.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المدونة العربية للثقافة والإعلام</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    <script>
-  // كود ذكي لرصد ظهور المقالات أثناء التمرير
-  const posts = document.querySelectorAll('.post-title');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('post-visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  posts.forEach(post => observer.observe(post));
-</script>
-
     body {
-      <!-- ===== العنوان الرئيسي أعلى الصفحة ===== -->
-<div class="top-banner">
-  <h1>المدونة العربية للثقافة والإعلام</h1>
-  <p>بإشراف الكاتب والإعلامي طراد علي بن سرحان الرويس</p>
-</div>
-<header class="main-header">
-  <div class="container header-flex">
-    <img src="images/شعار%20المدونة.png" alt="شعار المدونة" class="logo">
-    <div class="header-text">
-      <h1 class="blog-title">مدونة الفكر العربي</h1>
-      <p class="blog-subtitle">الكاتب والإعلامي طراد علي بن سرحان الرويس</p>
-    </div>
-  </div>
-</header>
-
       font-family: 'Cairo', sans-serif;
-      background-color: #0b1a33;
-      color: #f5f5f5;
       margin: 0;
-      padding: 0;
-      overflow-x: hidden;
+      background-color: #f5f7fa;
+      color: #222;
     }
 
     header {
-      text-align: center;
-      padding: 70px 20px 30px;
-      background: linear-gradient(180deg, #0b1a33 0%, #10264b 100%);
-      color: #f0c060;
+      background-color: #0d1b2a;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 2.6em;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-      animation: fadeInDown 1.2s ease-out;
+      font-size: 1.4rem;
+      margin: 0;
     }
 
-    header p {
-      font-size: 1.2em;
-      color: #d8d8d8;
-      animation: fadeInUp 1.2s ease-out;
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4ea8de;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(13,27,42,0.6), rgba(13,27,42,0.6)), 
+                  url('assets/images/header-bg.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
 
     .posts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      padding: 50px 5%;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
     .post-card {
-      background-color: #14294d;
-      border-radius: 18px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transform: translateY(30px);
-      opacity: 0;
-      transition: all 0.6s ease;
-    }
-
-    .post-card.visible {
-      transform: translateY(0);
-      opacity: 1;
+      transition: transform 0.3s ease;
     }
 
     .post-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-8px);
     }
 
-    .post-image {
+    .post-card img {
       width: 100%;
-      height: 220px;
+      height: 200px;
       object-fit: cover;
     }
 
     .post-content {
-      padding: 20px;
+      padding: 1rem 1.2rem;
     }
 
-    .post-title {
-      color: #f0c060;
-      font-size: 1.4em;
+    .post-content h3 {
+      color: #0d1b2a;
       margin-bottom: 10px;
     }
 
-    .post-excerpt {
-      color: #d0d0d0;
-      font-size: 1em;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    .read-more {
-      display: inline-block;
-      background-color: #f0c060;
-      color: #0b1a33;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-
-    .read-more:hover {
-      background-color: #ffda77;
-    }
-
-    /* ==== قسم الكاتب ==== */
-    .about-author {
-      text-align: center;
-      background: linear-gradient(180deg, #10264b 0%, #0b1a33 100%);
-      padding: 60px 20px;
-      color: #fff;
-      border-top: 2px solid #223a63;
-      animation: fadeInUp 1.2s ease-out;
-    }
-
-    .author-photo {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #f0c060;
-      margin-bottom: 20px;
-      box-shadow: 0 0 12px rgba(240, 192, 96, 0.5);
-    }
-
-    .author-name {
-      font-size: 1.6em;
-      color: #f0c060;
-      margin-bottom: 10px;
-    }
-
-    .author-bio {
-      max-width: 700px;
-      margin: 0 auto 25px;
-      line-height: 1.8;
-      font-size: 1.05em;
-      color: #d8d8d8;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      color: #f0c060;
-      font-size: 1.7em;
-      position: relative;
-      transition: transform 0.3s, color 0.3s;
-    }
-
-    .social-icons a::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: radial-gradient(circle, rgba(240,192,96,0.4) 10%, transparent 70%);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-      transition: all 0.4s ease;
-    }
-
-    .social-icons a:hover {
-      color: #ffda77;
-      transform: scale(1.2);
-    }
-
-    .social-icons a:hover::after {
-      width: 60px;
-      height: 60px;
-      opacity: 1;
+    .post-content p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     footer {
+      background-color: #0d1b2a;
+      color: white;
       text-align: center;
-      padding: 30px;
-      color: #ccc;
-      border-top: 1px solid #223a63;
-      margin-top: 40px;
-    }
-<div class="footer-social">
-  <h4>تابعنا على</h4>
-  <div class="social-icons">
-    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-  </div>
-</div>
-
-    /* ==== Animations ==== */
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
+      padding: 2rem 1rem;
+      margin-top: 3rem;
     }
 
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+    footer p {
+      margin: 0;
+      opacity: 0.8;
     }
   </style>
 </head>
-  <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-about">
-      <h3>المدونة العربية للثقافة والإعلام</h3>
-      <p>منبر فكري وإعلامي يعزز الوعي العربي ويجسد القيم الثقافية الراسخة نحو نهضةٍ عربيةٍ شاملة.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>روابط سريعة</h4>
-      <ul>
-        <li><a href="/">الرئيسية</a></li>
-        <li><a href="/about">عن المدونة</a></li>
-        <li><a href="/articles">المقالات</a></li>
-        <li><a href="/contact">اتصل بنا</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 جميع الحقوق محفوظة - بإشراف د. طراد الرويس</p>
-  </div>
-</footer>
-<footer>
-  <div class="footer-content">
-    <h3 class="footer-title">المدونة العربية للثقافة والإعلام</h3>
-    <p class="footer-subtitle">نافذة فكرية تُضيء طريق الوعي العربي</p>
-
-    <div class="social-section">
-      <p class="social-text">تابعنا على المنصات الاجتماعية</p>
-      <div class="social-icons">
-        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-
-    <p class="copyright">© 2025 جميع الحقوق محفوظة - الكاتب والإعلاني طراد علي بن سرحان الرويس</p>
-  </div>
-</footer>
-
 <body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-  </header>
-
-  <main>
-    <div class="posts-grid">
-      {% for post in site.posts %}
-      <div class="post-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-        {% endif %}
-        <div class="post-content">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-          <a href="{{ post.url | relative_url }}" class="read-more">اقرأ المزيد</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </main>
-
-  author-photo.png
-  
-  <section class="about-author">
-    <img src="assets/images/author-photo.png" alt="الكاتب والإعلامي طراد الرويس" class="author-photo">
-    <h2 class="author-name">الكاتب والإعلامي طراد علي بن سرحان الرويس</h2>
-    <p class="author-bio">
-      إعلامي وكاتب عربي مهتم بالشأن الثقافي والاجتماعي، له إسهامات فكرية في تعزيز الوعي العربي وبناء الإنسان.
-      تناولت مقالاته قضايا الأسرة، والهوية، والنهضة، والتضامن العربي.
-      يسعى من خلال "المدونة العربية للثقافة والإعلام" إلى نشر فكرٍ متوازن يعزز قيم الأصالة والتجديد في آنٍ واحد.
-    </p>
-
-    <div class="social-icons">
-      <a href="mailto:info@example.com" title="البريد الإلكتروني"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://x.com/" target="_blank" title="تويتر / إكس"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.facebook.com/" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.youtube.com/" target="_blank" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-  </section>
-
-<audio id="featherSound" src="feather-golden.mp3" preload="auto"></audio>
-<script>
-window.addEventListener("load", function () {
-  const sound = document.getElementById("featherSound");
-  setTimeout(() => {
-    sound.volume = 0.2;
-    sound.play().catch(() => {});
-  }, 800);
-});
-</script>
-  
-  <footer>
-    <p>© {{ site.time | date: "%Y" }} جميع الحقوق محفوظة - المدونة العربية للثقافة والإعلام</p>
-  </footer>
-
-  <script>
-    const cards = document.querySelectorAll('.post-card');
-    const revealOnScroll = () => {
-      cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          card.classList.add('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
-</body>
-</html>
+  <hea
