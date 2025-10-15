@@ -12,134 +12,6 @@ layout: default
   <style>
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #0b1a33; /* الأزرق الغامق */
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background: linear-gradient(180deg, #0b1a33 0%, #10264b 100%);
-      color: #f0c060;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    .posts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      padding: 40px 5%;
-    }
-
-    .post-card {
-      background-color: #14294d;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .post-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    }
-
-    .post-image {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-
-    .post-content {
-      padding: 20px;
-    }
-
-    .post-title {
-      color: #f0c060;
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
-
-    .post-excerpt {
-      color: #d0d0d0;
-      font-size: 1em;
-      line-height: 1.7;
-      margin-bottom: 15px;
-    }
-
-    .read-more {
-      display: inline-block;
-      background-color: #f0c060;
-      color: #0b1a33;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-
-    .read-more:hover {
-      background-color: #ffda77;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #ccc;
-      border-top: 1px solid #223a63;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-  </header>
-
-  <main>
-    <div class="posts-grid">
-      {% for post in site.posts %}
-      <div class="post-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-        {% endif %}
-        <div class="post-content">
-          <h2 class="post-title">{{ post.title }}</h2>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-          <a href="{{ post.url | relative_url }}" class="read-more">اقرأ المزيد</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </main>
-
-  <footer>
-    <p>© {{ site.time | date: "%Y" }} جميع الحقوق محفوظة - المدونة العربية للثقافة والإعلام</p>
-  </footer>
-</body>
-</html>
-
----
-layout: default
----
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
       background-color: #0b1a33;
       color: #f5f5f5;
       margin: 0;
@@ -232,6 +104,40 @@ layout: default
       background-color: #ffda77;
     }
 
+    /* ==== قسم الكاتب ==== */
+    .about-author {
+      text-align: center;
+      background: linear-gradient(180deg, #10264b 0%, #0b1a33 100%);
+      padding: 60px 20px;
+      color: #fff;
+      border-top: 2px solid #223a63;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .author-photo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #f0c060;
+      margin-bottom: 20px;
+      box-shadow: 0 0 12px rgba(240, 192, 96, 0.5);
+    }
+
+    .author-name {
+      font-size: 1.6em;
+      color: #f0c060;
+      margin-bottom: 10px;
+    }
+
+    .author-bio {
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.05em;
+      color: #d8d8d8;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -274,6 +180,16 @@ layout: default
       {% endfor %}
     </div>
   </main>
+
+  <section class="about-author">
+    <img src="assets/images/author-photo.png" alt="الكاتب والإعلامي طراد الرويس" class="author-photo">
+    <h2 class="author-name">الكاتب والإعلامي طراد علي بن سرحان الرويس</h2>
+    <p class="author-bio">
+      إعلامي وكاتب عربي مهتم بالشأن الثقافي والاجتماعي، له إسهامات فكرية في تعزيز الوعي العربي وبناء الإنسان،
+      تناولت مقالاته قضايا الأسرة، والهوية، والنهضة، والتضامن العربي.
+      يسعى من خلال "المدونة العربية للثقافة والإعلام" إلى نشر فكرٍ متوازن يعزز قيم الأصالة والتجديد في آنٍ واحد.
+    </p>
+  </section>
 
   <footer>
     <p>© {{ site.time | date: "%Y" }} جميع الحقوق محفوظة - المدونة العربية للثقافة والإعلام</p>
