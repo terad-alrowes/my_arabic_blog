@@ -682,3 +682,34 @@ body {
     text-shadow: 0 0 10px rgba(255, 215, 128, 0.4);
   }
 }
+/* تأثير ظهور المقالات عند التمرير */
+.article-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.article-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* نبضة خفيفة عند الظهور */
+.article-card.visible h2 {
+  animation: pulseTitle 1s ease;
+}
+
+@keyframes pulseTitle {
+  0% {
+    transform: scale(0.95);
+    text-shadow: 0 0 0 rgba(255, 215, 128, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 215, 128, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(255, 215, 128, 0);
+  }
+}
