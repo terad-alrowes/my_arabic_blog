@@ -103,7 +103,6 @@ body {
 }
 
 /* ========== الرأس العلوي ========== */
-/* ========== الرأس العلوي بتصميم فاخر وزخرفة عربية ========== */
 .main-header {
   background: linear-gradient(180deg, #1a2433 0%, #2e3b52 80%, #b38b2e 100%);
   color: #fff;
@@ -524,6 +523,31 @@ body {
   100% {
     background-position: 200%;
   }
+/* Social icons in footer */
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-social h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #f8e78f;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #f5d36b;
+  font-size: 1.5em;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 .hero-title {
