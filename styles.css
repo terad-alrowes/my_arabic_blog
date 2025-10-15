@@ -713,3 +713,24 @@ body {
     text-shadow: 0 0 0 rgba(255, 215, 128, 0);
   }
 }
+/* ===== الشريط العلوي (العنوان الرئيسي) ===== */
+.top-banner {
+  background: linear-gradient(135deg, #b38b2e, #e5c67a);
+  text-align: center;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.top-banner h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.top-banner p {
+  font-size: 1.1rem;
+  color: #fffbe9;
+  margin-top: 0.5rem;
+}
