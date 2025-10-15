@@ -12,6 +12,20 @@ layout: default
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    <script>
+  // كود ذكي لرصد ظهور المقالات أثناء التمرير
+  const posts = document.querySelectorAll('.post-title');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('post-visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  posts.forEach(post => observer.observe(post));
+</script>
+
     body {
       <!-- ===== العنوان الرئيسي أعلى الصفحة ===== -->
 <div class="top-banner">
