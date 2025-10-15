@@ -1,94 +1,127 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المدونة العربية للثقافة والإعلام</title>
+  <title>{{ site.title }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Cairo', sans-serif;
-      background-color: #f3f6fa;
-      color: #1c2a3a;
+      background-color: #0b1a33; /* الأزرق الغامق */
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
     }
 
     header {
-      background-color: #1c2a3a;
-      color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 60px 20px 20px;
+      background: linear-gradient(180deg, #0b1a33 0%, #10264b 100%);
+      color: #f0c060;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      background-color: #243447;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: #e8ecf1;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #1c2a3a, #2e4053);
-      color: white;
-    }
-
-    .hero h2 {
-      font-size: 2em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 1.2em;
-      color: #dce3ec;
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px 5%;
+    }
+
+    .post-card {
+      background-color: #14294d;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .post-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 20px;
+    }
+
+    .post-title {
+      color: #f0c060;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    .post-excerpt {
+      color: #d0d0d0;
+      font-size: 1em;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      background-color: #f0c060;
+      color: #0b1a33;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+
+    .read-more:hover {
+      background-color: #ffda77;
     }
 
     footer {
-      background-color: #1c2a3a;
-      color: #dce3ec;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 1em;
+      padding: 30px;
+      color: #ccc;
+      border-top: 1px solid #223a63;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>المدونة العربية للثقافة والإعلام</h1>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
   </header>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="articles.html">المقالات</a>
-    <a href="about.html">من نحن</a>
-    <a href="contact.html">اتصل بنا</a>
-  </nav>
-
-  <section class="hero">
-    <h2>مرحباً بكم</h2>
-    <p>في المدونة العربية للثقافة والإعلام</p>
-  </section>
+  <main>
+    <div class="posts-grid">
+      {% for post in site.posts %}
+      <div class="post-card">
+        {% if post.image %}
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
+        {% endif %}
+        <div class="post-content">
+          <h2 class="post-title">{{ post.title }}</h2>
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <a href="{{ post.url | relative_url }}" class="read-more">اقرأ المزيد</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </main>
 
   <footer>
-    منصة ثقافية بإشراف د. طراد الرويس تقدم مقالات عربية فكرية وإعلامية راقية.
+    <p>© {{ site.time | date: "%Y" }} جميع الحقوق محفوظة - المدونة العربية للثقافة والإعلام</p>
   </footer>
 </body>
 </html>
