@@ -79,3 +79,19 @@
 .menu-toggle {
   display: none;
 }
+/* تأثير التوهّج الذهبي لأيقونات السوشيال ميديا */
+.social-icons a {
+  color: #f5d36b;
+  font-size: 1.6em;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 10px rgba(245, 211, 107, 0.3);
+}
+
+.social-icons a:hover {
+  color: #fff8dc;
+  transform: scale(1.25);
+  text-shadow: 
+    0 0 10px #f5d36b,
+    0 0 20px #f5d36b,
+    0 0 40px #f5d36b;
+}
