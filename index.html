@@ -9,6 +9,7 @@ layout: default
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Cairo', sans-serif;
@@ -132,10 +133,27 @@ layout: default
 
     .author-bio {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 25px;
       line-height: 1.8;
       font-size: 1.05em;
       color: #d8d8d8;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: #f0c060;
+      font-size: 1.6em;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffda77;
+      transform: scale(1.2);
     }
 
     footer {
@@ -185,10 +203,17 @@ layout: default
     <img src="assets/images/author-photo.png" alt="الكاتب والإعلامي طراد الرويس" class="author-photo">
     <h2 class="author-name">الكاتب والإعلامي د. طراد علي بن سرحان الرويس</h2>
     <p class="author-bio">
-      إعلامي وكاتب عربي مهتم بالشأن الثقافي والاجتماعي، له إسهامات فكرية في تعزيز الوعي العربي وبناء الإنسان،
+      إعلامي وكاتب عربي مهتم بالشأن الثقافي والاجتماعي، له إسهامات فكرية في تعزيز الوعي العربي وبناء الإنسان.
       تناولت مقالاته قضايا الأسرة، والهوية، والنهضة، والتضامن العربي.
       يسعى من خلال "المدونة العربية للثقافة والإعلام" إلى نشر فكرٍ متوازن يعزز قيم الأصالة والتجديد في آنٍ واحد.
     </p>
+
+    <div class="social-icons">
+      <a href="mailto:info@example.com" title="البريد الإلكتروني"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://x.com/" target="_blank" title="تويتر / إكس"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.facebook.com/" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" title="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+    </div>
   </section>
 
   <footer>
