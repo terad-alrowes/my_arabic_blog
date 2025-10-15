@@ -95,3 +95,40 @@
     0 0 20px #f5d36b,
     0 0 40px #f5d36b;
 }
+/* تأثير التوهّج الذهبي مع نبض متدرج للأيقونات */
+@keyframes goldenPulse {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(245, 211, 107, 0.2),
+      0 0 10px rgba(245, 211, 107, 0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(245, 211, 107, 0.4),
+      0 0 30px rgba(245, 211, 107, 0.3);
+  }
+  100% {
+    text-shadow: 
+      0 0 5px rgba(245, 211, 107, 0.2),
+      0 0 10px rgba(245, 211, 107, 0.1);
+  }
+}
+
+/* تنسيق الأيقونات الأساسية */
+.social-icons a {
+  color: #f5d36b;
+  font-size: 1.6em;
+  margin: 0 10px;
+  transition: all 0.4s ease;
+  animation: goldenPulse 2.5s infinite ease-in-out;
+}
+
+/* تأثير اللمعان عند التمرير */
+.social-icons a:hover {
+  color: #fff8dc;
+  transform: scale(1.25);
+  text-shadow: 
+    0 0 10px #f5d36b,
+    0 0 20px #f5d36b,
+    0 0 40px #f5d36b;
+}
