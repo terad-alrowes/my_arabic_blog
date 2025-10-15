@@ -142,18 +142,40 @@ layout: default
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 22px;
+      margin-top: 10px;
     }
 
     .social-icons a {
       color: #f0c060;
-      font-size: 1.6em;
+      font-size: 1.7em;
+      position: relative;
       transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: radial-gradient(circle, rgba(240,192,96,0.4) 10%, transparent 70%);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.4s ease;
     }
 
     .social-icons a:hover {
       color: #ffda77;
       transform: scale(1.2);
+    }
+
+    .social-icons a:hover::after {
+      width: 60px;
+      height: 60px;
+      opacity: 1;
     }
 
     footer {
@@ -221,7 +243,6 @@ layout: default
   </footer>
 
   <script>
-    // Animation on scroll
     const cards = document.querySelectorAll('.post-card');
     const revealOnScroll = () => {
       cards.forEach(card => {
