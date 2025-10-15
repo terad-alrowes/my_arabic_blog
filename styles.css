@@ -26,14 +26,26 @@ body {
 }
 
 /* ========== الرأس العلوي ========== */
-/* ========== الرأس العلوي بتصميم فاخر ========== */
+/* ========== الرأس العلوي بتصميم فاخر وزخرفة عربية ========== */
 .main-header {
-  background: linear-gradient(180deg, #1a2433 0%, #2e3b52 85%, #b38b2e 100%);
+  background: linear-gradient(180deg, #1a2433 0%, #2e3b52 80%, #b38b2e 100%);
   color: #fff;
   text-align: center;
-  padding: 2rem 0 2.5rem 0;
+  padding: 2.5rem 0 3rem 0;
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
   border-bottom: 4px solid #b38b2e;
+}
+
+/* الزخرفة الخلفية الخفيفة */
+.main-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  opacity: 0.08;
+  z-index: 0;
 }
 
 .header-flex {
@@ -41,6 +53,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
