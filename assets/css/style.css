@@ -151,3 +151,74 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ===== تذييل المدونة ===== */
+footer {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b, #2b4c7e, #f5d36b);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid #f5d36b;
+  font-family: 'Amiri', serif;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-title {
+  font-size: 1.6em;
+  color: #f5d36b;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.footer-subtitle {
+  font-size: 1.1em;
+  color: #dcdcdc;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+/* النص الترحيبي فوق الأيقونات */
+.social-section {
+  margin-top: 20px;
+}
+
+.social-text {
+  font-size: 1.1em;
+  color: #f5d36b;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(245, 211, 107, 0.3);
+  animation: fadeInText 2s ease-in-out;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* الأيقونات الاجتماعية */
+.social-icons a {
+  color: #f5d36b;
+  font-size: 1.4em;
+  margin: 0 12px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #f5d36b;
+}
+
+copyright {
+  font-size: 0.9em;
+  color: #dcdcdc;
+  margin-top: 25px;
+}
