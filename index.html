@@ -117,4 +117,37 @@
   </style>
 </head>
 <body>
-  <hea
+  <header>
+    <h1>المدونة العربية للثقافة والإعلام</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="articles.html">المقالات</a>
+      <a href="about.html">عن الكاتب</a>
+      <a href="contact.html">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>مرحبًا بكم في فضاء الثقافة والإعلام العربي</h2>
+    <p>مقالات فكرية وثقافية وإعلامية تُعبّر عن رؤية عربية أصيلة نحو المستقبل</p>
+  </section>
+
+  <section class="posts-grid">
+    {% for post in site.posts %}
+      <div class="post-card">
+        <a href="{{ post.url }}">
+          <img src="{{ post.image }}" alt="{{ post.title }}">
+        </a>
+        <div class="post-content">
+          <h3><a href="{{ post.url }}" style="text-decoration:none; color:#0d1b2a;">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <footer>
+    <p>© 2025 المدونة العربية للثقافة والإعلام - جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>
