@@ -4,150 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>المدونة العربية للثقافة والإعلام</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="styles.css" />
   <style>
+    /* تنسيقات سريعة للرؤية الأولية */
     body {
-      font-family: 'Cairo', sans-serif;
+      font-family: "Cairo", sans-serif;
       margin: 0;
-      background-color: #f5f7fa;
-      color: #222;
+      background-color: #f8f8f8;
+      color: #333;
     }
 
     header {
-      background-color: #0d1b2a;
+      background-color: #222;
       color: white;
-      padding: 1rem 2rem;
+      padding: 15px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     header h1 {
-      font-size: 1.4rem;
+      font-size: 1.4em;
       margin: 0;
+      color: #cfa45d;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
     }
 
     nav a {
       color: white;
-      margin-left: 1.5rem;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #4ea8de;
+    nav a:hover, nav a.active {
+      color: #cfa45d;
     }
 
+    /* قسم المقدمة */
     .hero {
-      background: linear-gradient(rgba(13,27,42,0.6), rgba(13,27,42,0.6)), 
-                  url('assets/images/header-bg.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("images/hero-bg.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 10%;
     }
 
     .hero h2 {
-      font-size: 2.5rem;
+      font-size: 2.4em;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .posts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 3rem 2rem;
-      max-width: 1200px;
+      font-size: 1.2em;
+      max-width: 600px;
       margin: auto;
+      line-height: 1.8;
     }
 
-    .post-card {
-      background: white;
+    /* تصميم قسم المقالات بالشبكة */
+    .articles-section {
+      padding: 60px 10%;
+      background: #fafafa;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2em;
+      color: #222;
+      margin-bottom: 30px;
+      font-weight: bold;
+      border-bottom: 3px solid #cfa45d;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .article-card {
+      background: #fff;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .post-card:hover {
-      transform: translateY(-8px);
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
-    .post-card img {
+    .article-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
     }
 
-    .post-content {
-      padding: 1rem 1.2rem;
+    .article-card h3 {
+      font-size: 1.2em;
+      color: #333;
+      margin: 15px;
     }
 
-    .post-content h3 {
-      color: #0d1b2a;
-      margin-bottom: 10px;
-    }
-
-    .post-content p {
+    .article-card p {
+      font-size: 0.95em;
       color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
+      margin: 0 15px 15px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #cfa45d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .read-more:hover {
+      color: #a37e45;
     }
 
     footer {
-      background-color: #0d1b2a;
+      background: #222;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
+      padding: 20px 10%;
+      margin-top: 40px;
     }
 
     footer p {
       margin: 0;
-      opacity: 0.8;
+      font-size: 0.9em;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>المدونة العربية للثقافة والإعلام</h1>
     <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="articles.html">المقالات</a>
-      <a href="about.html">عن الكاتب</a>
-      <a href="contact.html">تواصل معنا</a>
+      <ul>
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="about.html">عن المدونة</a></li>
+        <li><a href="articles.html">المقالات</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+      </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>مرحبًا بكم في فضاء الثقافة والإعلام العربي</h2>
-    <p>مقالات فكرية وثقافية وإعلامية تُعبّر عن رؤية عربية أصيلة نحو المستقبل</p>
+    <h2>مرحباً بكم في المدونة العربية للثقافة والإعلام</h2>
+    <p>منصة فكرية تجمع بين الأصالة والمعاصرة، تسلط الضوء على القضايا الثقافية والإعلامية في الوطن العربي بروحٍ عربيةٍ نيرة.</p>
   </section>
 
-  <section class="posts-grid">
-    {% for post in site.posts %}
-      <div class="post-card">
-        <a href="{{ post.url }}">
-          <img src="{{ post.image }}" alt="{{ post.title }}">
-        </a>
-        <div class="post-content">
-          <h3><a href="{{ post.url }}" style="text-decoration:none; color:#0d1b2a;">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        </div>
-      </div>
-    {% endfor %}
+  <section class="articles-section">
+    <h2 class="section-title">المقالات الحديثة</h2>
+    <div class="articles-grid">
+      <article class="article-card">
+        <img src="images/article1.jpg" alt="تعزيز وحدتنا لتحقيق نهضتنا العربية" />
+        <h3>تعزيز وحدتنا لتحقيق نهضتنا العربية</h3>
+        <p>دعوة صادقة نحو توحيد الجهود الفكرية والثقافية من أجل نهضة عربية مستدامة.</p>
+        <a href="articles/unity.html" class="read-more">اقرأ المزيد</a>
+      </article>
+
+      <article class="article-card">
+        <img src="images/article2.jpg" alt="الإعلام العربي وتحديات المستقبل" />
+        <h3>الإعلام العربي وتحديات المستقبل</h3>
+        <p>تحليل عميق لدور الإعلام في رسم ملامح الوعي العربي ومواكبة التطور الرقمي.</p>
+        <a href="articles/media.html" class="read-more">اقرأ المزيد</a>
+      </article>
+
+      <article class="article-card">
+        <img src="images/article3.jpg" alt="ثقافتنا هوية الأمة" />
+        <h3>ثقافتنا هوية الأمة</h3>
+        <p>رحلة في عمق الثقافة العربية ودورها في الحفاظ على الهوية في زمن العولمة.</p>
+        <a href="articles/culture.html" class="read-more">اقرأ المزيد</a>
+      </article>
+
+      <article class="article-card">
+        <img src="images/article4.jpg" alt="الوعي الشبابي العربي" />
+        <h3>الوعي الشبابي العربي</h3>
+        <p>قراءة فكرية في واقع الشباب العربي ودورهم في النهضة والإصلاح.</p>
+        <a href="articles/youth.html" class="read-more">اقرأ المزيد</a>
+      </article>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 المدونة العربية للثقافة والإعلام - جميع الحقوق محفوظة</p>
+    <p>© 2025 المدونة العربية للثقافة والإعلام — بإشراف د. طراد الرويس</p>
   </footer>
 </body>
 </html>
